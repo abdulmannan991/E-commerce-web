@@ -71,8 +71,6 @@ export default function Home() {
       SKINNY FIT JEANS
       </p>
     
-      <Image src={"/Tstar.png"} width={127} height={16} alt={"menu"} className=" mt-4"></Image>
-      <Image src={"/Sstar.png"} width={106} height={16} alt={"menu"} className=" mt-4"></Image>
     </div>
 
   <br /><br /><br /><br />
