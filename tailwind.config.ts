@@ -14,6 +14,7 @@ const config: Config = {
         satoshi: ['Satoshi', 'sans-serif'],
       },
       colors: {
+        'red' :'#FF33331A',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
