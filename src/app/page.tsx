@@ -201,8 +201,8 @@ export default function Home() {
 </div>
 
 <p className="font-satoshi text-[14px] font-normal text-gray-400">
-  "I'm blown away by the quality and style of the clothes
-   I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+  {`"Im blown away by the quality and style of the clothes
+   I received from Shop.co. From casual wear to elegant dresses every piece Ive bought has exceeded my expectations.”`}
   </p>
 
  </div>
