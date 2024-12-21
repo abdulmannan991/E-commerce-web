@@ -3,21 +3,28 @@ import Image from "next/image";
 export default function Home() {
   return (
    <div >
-    <div className="h-[853px] w-[390px] flex  mt-2 "  style={{background: "#F2F0F1"} }>
+    <div className="h-[853px] w-[390px] flex  mt-2 lg:h-[663px] lg:mt-10 lg:w-[1440px]"  style={{background: "#F2F0F1"} }>
 
   <div>
-     <p className="font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6">
+  <p className="font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6 lg:hidden">
    FIND CLOTHES THAT MATCHES YOUR STYLE
     </p> 
+{/* Desktop */}
+    <p className="lg:relative lg:z-10 font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6 hidden lg:block lg:text-[64px] lg:ml-[100px] lg:mt-20 lg:leading-[64px]">
+   <span>FIND CLOTHES </span>
+   <span className="lg:block">THAT MATCHES  </span>
+   <span className="lg:block">YOUR STYLE</span>
+    </p> 
 
-    <p className="ml-4"  style={{color:": #00000099"}}>
+    <p className="lg:relative lg:z-10 ml-4 lg:text-[16px] lg:ml-[110px]"  style={{color:": #00000099"}}>
 
-    Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
-
+    Browse through our diverse range of meticulously crafted garments, designed 
+    
+    <span className="lg:block">to bring out your individuality and cater to your sense of style.</span>
     </p>
 
-   <div className="text-center">
-   <button className="bg-black text-white text-center py-2 px-6 rounded-3xl mx-auto mt-8 w-[350px]">
+   <div className="lg:relative lg:z-10 text-center lg:mr-[1060px]">
+   <button className="bg-black text-white text-center py-2 px-6 rounded-3xl mx-auto mt-8 w-[350px] lg:w-44 lg:h-12">
   Shop Now
 </button>
    </div>
@@ -31,53 +38,84 @@ export default function Home() {
 
   <p className="ml-56 -mt-4 font-satoshi text-[12px] " style={{color:": #00000099"}} >High-Quality Products</p>
 
-  <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} className=""></Image>
+  <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} className="lg:hidden"></Image>
+  <Image src={"/desh.png"} width={1440} height={663} alt={"menu"} className="hidden lg:block -mt-[450px]"></Image>
+  <Image src={"/dsright.png"} width={104} height={104} alt={"menu"} className="hidden lg:block lg:ml-[1255px] -mt-[550px]"></Image>
+  <Image src={"/dsleft.png"} width={56} height={56} alt={"menu"} className=" hidden lg:block lg:ml-[750px] mt-[40px]"></Image>
+
   
 </div>
 
-<div className="w-[390px] h-[146px] bg-black">
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div className="w-[390px] h-[146px] bg-black lg:w-[1440px] lg:h-[122px]  ">
 
-<div className="flex justify-around">
-<Image src={"/Versca.png"} width={116} height={23} alt={"menu"} className=" mt-4"></Image>
-<Image src={"/zara.png"} width={63} height={26} alt={"menu"} className=" mt-4"></Image>
-<Image src={"/gucci.png"} width={109} height={25} alt={"menu"} className=" mt-4 mr-4"></Image>
+<div className="flex justify-around ">
+<Image src={"/Versca.png"} width={116} height={23} alt={"menu"} className=" mt-16 "></Image>
+<Image src={"/zara.png"} width={63} height={26} alt={"menu"} className=" mt-16"></Image>
+<Image src={"/gucci.png"} width={109} height={25} alt={"menu"} className=" mt-16 mr-4"></Image>
+<Image src={"/prada.png"} width={127} height={21} alt={"menu"} className=" mt-16 hidden lg:block"></Image>
+<Image src={"/Calvin.png"} width={134} height={21} alt={"menu"} className=" mt-16 hidden lg:block"></Image>
 
 </div>
-<div className="flex justify-around">
-<Image src={"/prada.png"} width={127} height={21} alt={"menu"} className=" mt-4"></Image>
+<div className="flex justify-around lg:hidden">
+<Image src={"/prada.png"} width={127} height={21} alt={"menu"} className=" mt-4 "></Image>
 <Image src={"/Calvin.png"} width={134} height={21} alt={"menu"} className=" mt-4"></Image>
 </div>
 </div>
 
 
 <div>
-  <p className="font-integral text-[32px] font-bold text-center mt-6 ">
+  <p className="font-integral text-[32px] font-bold text-center mt-6 lg:text-[48px]">
   NEW ARRIVALS
   </p>
 
   
-    <div className="flex space-x-4 p-4">
+  <div className="flex space-x-4 p-4  lg:hidden">
 <Image src={"/blackT-shirt.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
 <Image src={"/Skinny.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+
+    </div>
+
+{/* Desktop */}
+    <div className="flex space-x-4 p-4 lg:flex lg:justify-evenly">
+<Image src={"/blackT-shirt.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4"></Image>
+<Image src={"/ds.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4"></Image>
+<Image src={"/dc.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4"></Image>
+<Image src={"/dsleeve.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4"></Image>
       
     </div>
-    <div className="flex space-x-5">
-      <p className="ml-4 text-sm font-satoshi font-bold ">
+    <div className="flex space-x-5 lg:flex lg:justify-start lg:gap-36 ">
+    <p className="ml-4 lg:ml-14 text-sm font-satoshi font-bold ">
+      T-SHIRT WITH TAPE DETAILS
+      </p>
+
+      <div className="lg:flex gap-x-48">
+      <p className=" text-sm font-satoshi font-bold ">
+      SKINNY FIT JEANS
+      </p>
+
+     <div className="lg:flex gap-x-40">
+     <p className="ml-4 text-sm font-satoshi font-bold hidden lg:block lg:space-x-4">
       T-SHIRT WITH TAPE DETAILS
       </p>
 
       
-      <p className=" text-sm font-satoshi font-bold ">
+      <p className=" text-sm font-satoshi font-bold hidden lg:block">
       SKINNY FIT JEANS
       </p>
+     </div>
+     </div>
     
     </div>
-    <div className="flex ">
-<Image  src={"/Tstar.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-4"></Image>
-<Image src={"/Sstar.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-28"></Image>
+    <div className="flex  lg:flex  lg:justify-start  lg:gap-32">
+    <Image  src={"/Tstar.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-4 lg:-ml-32"></Image>
+    <Image src={"/Sstar.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-28 "></Image>
+    <Image  src={"/Tstar.png"} width={100} height={100} alt={"menu"} className="hidden lg:block mt-4 ml-4 "></Image>
+<Image src={"/Tstar.png"} width={100} height={100} alt={"menu"} className="hidden lg:block mt-4 ml-28"></Image>
+<Image src={"/Tstar.png"} width={100} height={100} alt={"menu"} className="hidden lg:block mt-4 ml-28"></Image>
 </div>
 
-<div className="flex font-satoshi font-bold text-xl mt-2 ">
+<div className="flex font-satoshi font-bold text-xl mt-2 lg:hidden">
 
   <p className=" mt-4 ml-4 ">$120</p>
   <p className=" mt-4 ml-[169px]">$240</p>
@@ -87,7 +125,7 @@ export default function Home() {
 </div>
 
 <div className="flex justify-center items-center">
-<button className="h-[46px] w-[358px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
+<button className="h-[46px] w-[358px] lg:h-[52px] lg:w-[218px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
   <p>
     View all
   </p>
@@ -95,7 +133,7 @@ export default function Home() {
 </div>
 
 <div className="flex justify-center items-center">
-<div className=" w-[358px] border-[1px]  mt-24 ">
+<div className=" w-[358px] lg:w-[1240px] border-[1px]  mt-24 ">
 <hr />
 </div>
 </div>
@@ -105,18 +143,29 @@ export default function Home() {
 
 
 <div>
-  <p className="font-integral text-[32px] font-bold text-center mt-6 ">
+  <p className="font-integral text-[32px] lg:text-[48px] font-bold text-center mt-6 ">
   Top Selling
   </p>
 
   
-    <div className="flex space-x-4 p-4">
-<Image src={"/Vertical.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+  <div className="flex space-x-4 p-4 lg:gap-36 lg:hidden">
+    <Image src={"/Vertical.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
 <Image src={"/Courage.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+<Image src={"/dlo.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+<Image src={"/dfad.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
       
     </div>
-    <div className="flex gap-x-16">
-      <p className="ml-4 text-sm font-satoshi font-bold ">
+    {/* Desktop */}
+
+    <div className="flex space-x-4 p-4 lg:gap-12 lg:flex hidden lg:block">
+    <Image src={"/dv.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
+<Image src={"/dcourage.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
+<Image src={"/dlo.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
+<Image src={"/dfad.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
+      
+    </div>
+    <div className="flex gap-x-16 lg:gap-52">
+    <p className="ml-4 text-sm font-satoshi font-bold ">
       Vertical Striped Shirt
       </p>
 
@@ -124,25 +173,38 @@ export default function Home() {
       <p className=" text-sm font-satoshi font-bold ">
       Courage Graphic T-short
       </p>
+
+      <p className="ml-4 text-sm font-satoshi font-bold hidden lg:block">
+      Vertical Striped Shirt
+      </p>
+
+      
+      <p className=" text-sm font-satoshi font-bold hidden lg:block">
+      Courage Graphic T-short
+      </p>
     
     </div>
-    <div className="flex ">
-<Image  src={"/Vs.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-4"></Image>
+    <div className="flex lg:gap-48">
+    <Image  src={"/Vs.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-4"></Image>
 <Image src={"/Cc.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-28"></Image>
+<Image  src={"/Vs.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-4 hidden lg:block"></Image>
+<Image src={"/Cc.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-28 hidden lg:block"></Image>
+
 </div>
 
 <div className="flex font-satoshi font-bold text-xl mt-2 ">
 
-  <p className=" mt-4 ml-4 ">$212</p>
+<p className=" mt-4 ml-4 ">$212</p>
   
   <p className=" mt-4 ml-2 text-gray-400 line-through">$235</p>
 <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-4 ml-2 text-xs  text-rose-400 text-center">-20%</p>
-  <p className=" mt-4 ml-[70px]">$145</p>
-
+  <p className=" mt-4 ml-[70px] lg:ml-[270px]">$145</p>
+  <p className=" mt-4 ml-[270px] hidden lg:block">$80</p>
+  <p className=" mt-4 ml-[370px] hidden lg:block">$210</p>
 </div>
 
 <div className="flex justify-center items-center">
-<button className="h-[46px] w-[358px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
+<button className="lg:h-[52px] lg:w-[218px] h-[46px] w-[358px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
   <p>
     View all
   </p>
@@ -228,15 +290,21 @@ STAY UPTO DATE
 </span>
 
 <div>
-<button className="h-[42px] w-[311px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
-  <p>
-    View all
-  </p>
-</button>
+<div className="relative w-[311px]">
+  <span className="text-[16px] mt-2 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+    📧 
+  </span>
+  <input
+    name="text"
+    placeholder="Enter your email address"
+    className="text-[14px] text-black outline-none pl-10 h-[42px] w-full rounded-[62px] bg-white border-[1px] font-satoshi font-medium mt-4"
+  />
+</div>
+  
 
 <button className="h-[42px] w-[311px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
-  <p>
-    View all
+  <p className="text-black font-satoshi text-[14px]">
+  Subscribe to Newsletter
   </p>
 </button>
 </div>
@@ -250,8 +318,89 @@ STAY UPTO DATE
 
     </div>
 
+    <div>
+    <p className="font-integral font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2">SHOP.CO</p>
+      <p className="font-satoshi text-gray-500 text-[14px] mt-2 ml-2">
+      We have clothes that suits your style and which you are proud to wear. From women to men.
+      </p>
 
-  <br /><br /><br /><br />
+      <p className="mt-8 ml-2">
+        <Image src={"/Social.png"} height={28} width={148} alt="social" ></Image>
+      </p>
+      <div className="flex justify-around items-start w-full mt-6 flex-wrap">
+  {/* Company Section */}
+  <div className="flex flex-col mr-12">
+    <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium">
+      Company
+    </p>
+    <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[91px] text-gray-500 mt-2 leading-7">
+      <li>About</li>
+      <li>Features</li>
+      <li>Works</li>
+      <li>Career</li>
+    </ul>
+  </div>
+
+  {/* Help Section */}
+  <div className="flex flex-col mr-12">
+    <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium">
+      Help
+    </p>
+    <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[131px] text-gray-500 mt-2 leading-7">
+      <li>Customer Support</li>
+      <li>Delivery Detail</li>
+      <li>Terms & Conditions</li>
+      <li>Privacy Policy</li>
+    </ul>
+  </div>
+
+  {/* FAQ Section */}
+  <div className="flex flex-col mr-12 mt-6">
+    <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium">
+      FAQ
+    </p>
+    <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[91px] text-gray-500 mt-2 leading-7">
+      <li>Account</li>
+      <li>Manage Deliveries</li>
+      <li>Orders</li>
+      <li>Payment</li>
+    </ul>
+  </div>
+
+  {/* Resources Section */}
+  <div className="flex flex-col mt-6">
+    <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium mr-24">
+      Resources
+    </p>
+    <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[131px] text-gray-500 mt-2 leading-7">
+      <li>Free eBook</li>
+      <li>Development Tutorial</li>
+      <li>How to - Blog</li>
+      <li>YouTube Playlist</li>
+    </ul>
+  </div>
+</div>
+
+
+      
+    </div>
+
+    <div className="w-[358px] border-[1px] flex justify-center items-center mt-16 ml-3">
+      <hr />
+    </div>
+
+<div className="">
+  <p className="text-center font-satoshi font-normal text-gray-400 mt-4 text-[14px] ">
+  Shop.co © 2000-2021, All rights reserved
+  </p>
+
+<div className="flex justify-center items-center mt-4">
+<Image src={"/Vfooter.png"} height={25} width={240} alt="social" ></Image>
+
+</div>
+</div>
+
+  <br /><br />
 </div>
 
 
