@@ -25,6 +25,8 @@ export default function Customer(){
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
+                <span className="text-yellow-500 ">⭐</span>
+
             
                 <div className="flex items-center space-x-2">
               <p className=" mt-2 font-satoshi text-[16px] lg:text-[20px] font-bold text-black">
@@ -56,6 +58,8 @@ export default function Customer(){
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
+                <span className="text-yellow-500 ">⭐</span>
+
             
                 <div className="flex items-center space-x-2">
               <p className=" mt-2 font-satoshi text-[16px] lg:text-[20px] font-bold text-black">
@@ -86,6 +90,8 @@ export default function Customer(){
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
+                <span className="text-yellow-500 ">⭐</span>
+
             
                 <div className="flex items-center space-x-2">
               <p className=" mt-2 font-satoshi text-[16px] lg:text-[20px] font-bold text-black">
@@ -113,6 +119,7 @@ export default function Customer(){
             
                 <div className="flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px] hidden lg:block">
                 <div className=" mt-6 space-x-1 ml-6 ">
+                <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>

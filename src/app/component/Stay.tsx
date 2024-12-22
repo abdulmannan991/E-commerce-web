@@ -6,7 +6,8 @@ export default function StayPage(){
         <div>
             {/* Stay upto date */}
                 <div className="flex justify-center items-center mt-10 ">
-            <div className=" flex justify-center h-[293px] w-[358px] bg-black rounded-[20px] lg:h-[180px] lg:w-[1240px] ">
+            <div className="bg-lightGray h-[900px] w-[392px] flex justify-center mt-32">
+            <div className=" flex justify-center h-[293px] w-[358px] bg-black -mt-32 rounded-[20px] lg:h-[180px] lg:w-[1240px] ">
             
             <div className="hidden lg:block -ml-52 w-[751px] h-[94px]  font-integral font-bold text-white text-[32px] mt-6 lg:flex lg:justify-start lg:items-start gap-2">
             <p className=" ">
@@ -89,7 +90,7 @@ export default function StayPage(){
             
             
             </div>
-            
+            </div>           
                 </div>
             
         </div>
