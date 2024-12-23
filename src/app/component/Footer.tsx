@@ -3,8 +3,8 @@ export default function Footer(){
 
 return(
 <div>
-<div className="lg:hidden -mt-[700px]">
-    <p className="font-integral font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
+<div className="lg:hidden  -mt-[700px]">
+    <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
       <p className="font-satoshi text-gray-500 text-[14px] mt-2 ml-2">
       We have clothes that suits your style and which you are proud to wear. From women to men.
       </p>
@@ -76,7 +76,7 @@ return(
 {/* Desktop */}
 
 
-<div className="lg:flex hidden flex-wrap justify-between items-start mr-12 mt-12 ml-10">
+<div className="lg:flex hidden flex-wrap justify-between items-start mr-12 mt-12 ml-10 lg:-mt-[400px]">
   <ul className="  font-satoshi text-[14px] font-normal text-gray-500 w-[91px] leading-7">
     <li className="text-[35px] text-black font-bold ">SHOP.CO</li>
     <li className="w-[260px] mt-4">We have clothes that suit your style and which you are proud to wear. From women to men.</li>
@@ -132,7 +132,7 @@ return(
 {/* Desktop */}
 
 
-    <div className="w-[358px] lg:ml-12 lg:w-[1240px] border-[1px] flex justify-center items-center mt-16 ml-3">
+    <div className="w-[358px] lg:ml-12 lg:w-[1240px]  border-[1px] flex justify-center items-center mt-16 ml-3">
       <hr />
     </div>
 

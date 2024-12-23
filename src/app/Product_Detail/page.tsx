@@ -6,12 +6,12 @@ export default function ProductDetail(){
     return(
 
         <div>
-          <div className="mt-6 w-[358px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+          <div className="mt-6 w-[358px] lg:w-[1240px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
 </div>
 
 <div>
-    <ul className="flex gap-2 text-gray-500 mt-4 ml-4">
+    <ul className="flex gap-2 lg:text-[16px] lg:ml-20 text-gray-500 mt-4 ml-4 lg:gap-4">
         <li>Home {`>`} </li>
         <li>Shop {`>`} </li>
         <li>Men {`>`} </li>
@@ -19,36 +19,37 @@ export default function ProductDetail(){
     </ul>
 </div>
 
-<div className="flex justify-center items-center mt-4">
-    <Image src={"/Dimage1.png"} height={290} width={358} alt="product" ></Image>
+<div className="flex justify-center items-center mt-4 lg:flex lg:flex-col lg:items-start lg:ml-[300px]  ">
+    <Image src={"/Dimage1.png"} height={290} width={358} alt="product" className="lg:w-[444px] lg:h-[530px] mt-4"></Image>
 </div>
 
 
-<div className="flex justify-center items-center mt-4 gap-4">
-    <Image src={"/image2.png"} height={106} width={111} alt="product" ></Image>
-    <Image src={"/Dimage3.png"} height={106} width={111} alt="product" ></Image>
-    <Image src={"/Dimage2.png"} height={106} width={112} alt="product" ></Image>
+<div className="flex justify-center items-center mt-4 gap-4 lg:flex lg:flex-col lg:ml-28 lg:items-start lg:-mt-[530px]">
+    <Image src={"/image2.png"} height={106} width={111} alt="product"  className="lg:w-[152px] h-[167px]"></Image>
+    <Image src={"/Dimage3.png"} height={106} width={111} alt="product" className="lg:w-[152px] h-[168px]" ></Image>
+    <Image src={"/Dimage2.png"} height={106} width={112} alt="product" className="lg:w-[152px] h-[167px]"></Image>
 
 </div>
 
-<div>
-    <p className="font-integral font-bold text-[24px] mt-2 ml-4 h-[56px] w-[220px]">
+
+<div className="lg:flex lg:flex-col lg:items-end  lg:mr-2 lg:-mt-[540px] ">
+    <p className="font-integral font-bold text-[24px] mt-2 ml-4 h-[56px] w-[220px] lg:text-[40px] lg:w-[600px] lg:h-[48px] ">
     One Life Graphic T-shirt
     </p>
-    <Image src={"/Dstar.png"} height={19} width={154} alt="rating" className="mt-4 ml-4" ></Image>
+    <Image src={"/Dstar.png"} height={19} width={154} alt="rating" className="mt-4 ml-4 lg:mr-[440px]" ></Image>
 
 </div>
 
-<div className="flex mt-4 ml-4 gap-3">
-<p className="font-satoshi font-bold text-[24px]">
+<div className="flex mt-4 ml-4 gap-3 lg:flex lg:justify-end lg:items-end lg:mr-[380px] ">
+<p className="font-satoshi font-bold text-[24px] lg:text-[32px]">
 $260
     </p>
 
-    <p className="font-satoshi font-bold text-[24px] text-gray-400 line-through">
+    <p className="font-satoshi font-bold text-[24px] text-gray-400 line-through lg:text-[32px]">
 $300
     </p>
 
-    <div className="h-[31px] w-[62px] rounded-[62px] bg-red text-rose-500 text-center  flex justify-center items-center">
+    <div className="h-[31px] w-[62px] rounded-[62px] bg-red text-rose-500 text-center lg:mb-2  flex justify-center items-center">
         <p>
             -40%
         </p>
@@ -56,33 +57,33 @@ $300
     
 </div>
 
-<div>
-<p className="h-[50px] w-[368px] ml-4 text-[14px] text-gray-400 mt-4">
+<div className="lg:flex lg:flex-col lg:items-end lg:mr-64">
+<p className="h-[50px] w-[368px] ml-4 text-[14px] text-gray-400 mt-4  lg:-mr-[140px] lg:h-[33px] lg:w-[490px]">
     This graphic t-shirt which is perfect for any 
     occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
     </p>
 </div>
 
-<div className="mt-6 w-[358px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+<div className="mt-6 w-[358px] lg:w-[590px] text-center border-[1px] flex flex-col justify-center items-center mx-auto lg:flex lg:flex-col lg:items-end lg:mr-64">
   <hr />
 </div>
 
-<p className="text-gray-400 mt-4 ml-4 font-satoshi text-[14px]">
+<p className="text-gray-400 mt-4 ml-4 font-satoshi text-[14px] lg:flex lg:flex-col lg:items-end lg:mr-64">
     Select Colors
 </p>
 
-<div className="mt-4 ">
+<div className="mt-4 lg:flex lg:flex-col lg:items-end lg:mr-64">
 
 <Image src={"/Dcolors.png"} height={39} width={142} alt="rating" className="mt-4 ml-4" ></Image>
 
 
 </div>
 
-<div className="mt-6 w-[358px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+<div className="mt-6 w-[358px] lg:w-[590px]  text-center border-[1px] flex flex-col justify-center items-center mx-auto lg:flex lg:flex-col lg:items-end lg:mr-64">
   <hr />
 </div>
 
-<div>
+<div className="lg:flex lg:flex-col lg:items-end lg:mr-64">
     
 <p className="text-gray-400 mt-4 ml-4 font-satoshi text-[14px]">
     Choose Size
@@ -90,7 +91,7 @@ $300
 
 </div>
 
-<div className="flex gap-4 mt-4">
+<div className="flex gap-4 mt-4 lg:flex lg:flex-col lg:items-end lg:mr-64">
 
 <div className=" h-[39px] w-[74px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
 <button className=" text-customBlack" >Small</button>
