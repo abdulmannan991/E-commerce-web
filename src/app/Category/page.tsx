@@ -244,17 +244,17 @@ export default function CategoryPage(){
             </div>
 
             <div className="lg:flex lg:justify-center lg:items-center">
-          <div className="mt-6 w-[358px] lg:w-[925px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+          <div className="mt-6 w-[358px] lg:w-[925px] lg:ml-[430px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
   </div>
   </div>
 
 <div className="">
 
-<div className="flex   items-center mt-4 ml-2 ">
-<button className="flex items-center justify-around lg:flex lg:items-end lg:justify-around text-white border-[1px] rounded-[8px] w-[90px] h-[36px] lg:w-[110px]">
-<Image src={"/arrow-left.png"} width={9} height={9} alt={"menu"} className=" "></Image>
-<p className="text-[12px] font-satoshi font-medium text-black">Previous</p>
+<div className="flex   items-center mt-4 ml-2 lg:flex lg:justify-center lg:items-center ">
+<button className="lg:mr-[140px] lg:ml-[340px] flex items-center justify-around  lg:flex lg:items-center lg:justify-around text-white border-[1px] rounded-[8px] w-[90px] h-[36px] lg:w-[110px]">
+<Image src={"/arrow-left.png"} width={9} height={9} alt={"menu"} className=" lg:w-[20px] lg:h-[20px] " ></Image>
+<p className="text-[12px] lg:text-[12px] font-satoshi font-medium text-black ">Previous</p>
 </button>
 
 <div className="w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[8px] ml-2 flex justify-center items-center bg-gray-200 ">
@@ -267,7 +267,7 @@ export default function CategoryPage(){
 
 </div>
 
-<div className="hidden lg:block w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[8px] ml-2 flex justify-center items-center bg-gray-200 ">
+<div className="hidden lg:block w-[36px] h-[36px] lg:w-[40px] text-center  lg:h-[40px] rounded-[8px] ml-2 lg:flex lg:justify-center lg:items-center bg-gray-200 ">
 <button>3</button>
 
 </div>
@@ -282,13 +282,13 @@ export default function CategoryPage(){
 
 </div>
 
-<div className="w-[36px] h-[36px] rounded-[8px] ml-2 flex justify-center items-center bg-white  ">
-<button>10</button>
+<div className="w-[36px] h-[36px] rounded-[8px] ml-2 flex justify-center items-center bg-white ">
+<button className=" ">10</button>
 
 </div>
 
-<div className="flex   items-center  ml-2 ">
-<button className="flex items-center justify-around text-white border-[1px] rounded-[8px] w-[73px] lg:w-[86px] h-[36px] ">
+<div className="flex lg:ml-[250px]  items-center  ml-2 lg:flex lg:flex-row lg:items-end">
+<button className=" flex items-center justify-around text-white border-[1px] rounded-[8px] w-[73px] lg:w-[86px] h-[36px] ">
 <p className="text-[12px] font-satoshi font-medium text-black">Next</p>
 <Image src={"/arrow-right.png"} width={9} height={9} alt={"menu"} className=" "></Image>
 
