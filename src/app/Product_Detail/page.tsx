@@ -12,9 +12,21 @@ export default function ProductDetail(){
 
 <div>
     <ul className="flex gap-2 lg:text-[16px] lg:ml-20 text-gray-500 mt-4 ml-4 lg:gap-4">
-        <li>Home {`>`} </li>
-        <li>Shop {`>`} </li>
-        <li>Men {`>`} </li>
+        <li>Home  </li>
+        <li>
+                          <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className="mt-2 "></Image>
+                    
+                </li>
+        <li>Shop  </li>
+        <li>
+                          <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className="mt-2 "></Image>
+                    
+                </li>
+        <li>Men  </li>
+        <li>
+                          <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className="mt-2 "></Image>
+                    
+                </li>
         <li>T-Shirt </li>
     </ul>
 </div>
