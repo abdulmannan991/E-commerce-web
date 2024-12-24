@@ -7,10 +7,12 @@ export default function CategoryPage(){
     return(
         <div>
   <div>
-          <div className="mt-6 w-[358px] lg:w-[1380px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+          <div className="mt-6 w-[358px] lg:ml-12 lg:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
+
   </div>
   </div>
+  
 
   <div>
     <ul className="flex gap-2 lg:text-[16px] lg:ml-20 text-gray-500 mt-4 ml-4 lg:gap-4">
@@ -19,6 +21,7 @@ export default function CategoryPage(){
       
     </ul>
 </div>
+
 
 <div className="flex lg:flex lg:justify-between lg:items-center lg:space-x-4 lg:px-40">
     <p className="font-satoshi font-bold text-[24px] lg:text-[32px] mt-4 ml-4 lg:ml-[250px] ">
@@ -297,6 +300,312 @@ export default function CategoryPage(){
 
 </div>
 </div>
+</div>
+
+
+<div className="lg:w-[295px] lg:h-[1220px] border-[1px] rounded-[20px] ml-20 -mt-[1300px] hidden lg:block ">
+    <div>
+<div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
+<p>Filters</p>
+
+<button className="">
+      <Image src={"/filter.png"} width={32} height={32} alt={"filter"} className=" "></Image>
+    
+    </button>
+
+</div>
+
+<div className="border-[1px] w-[247px] flex justify-center items-center ml-5">
+  <hr />
+  </div>
+
+
+  <div className="font-satoshi text-[16px] font-normal text-gray-400 p-4 flex justify-between">
+  <p>T-shirts</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" "></Image>
+    
+    </button>
+    
+
+</div>
+
+<div className="font-satoshi text-[16px] text-gray-400 font-normal p-4 flex justify-between">
+
+<p>Shorts</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" "></Image>
+    
+    </button>
+
+    </div>
+
+    <div className="font-satoshi text-gray-400 text-[16px] font-normal p-4 flex justify-between">
+
+<p>Shirts</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" "></Image>
+    
+    </button>
+    </div>
+
+
+    <div className="font-satoshi text-gray-400 text-[16px] font-normal p-4 flex justify-between">
+
+<p>Hoodie</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" "></Image>
+    
+    </button>
+    </div>
+
+
+    <div className="font-satoshi text-gray-400 text-[16px] font-normal p-4 flex justify-between">
+
+<p>Jeans</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" "></Image>
+    
+    </button>
+
+    </div>
+    </div>
+
+    <div className="border-[1px] w-[247px] flex justify-center items-center ml-5">
+  <hr />
+  </div>
+
+  <div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
+<p>Price</p>
+
+<button className="">
+      <Image src={"/C-up-arrow.png"} width={16} height={16} alt={"filter"} className="text-black "></Image>
+    
+    </button>
+
+</div>
+
+<div className="flex flex-col ml-5 items-center space-y-4 w-[247px]">
+  {/* Slider Container */}
+  <div className="relative w-full">
+    {/* Track */}
+    <div className="absolute w-full h-[5px] bg-gray-200 rounded-full"></div>
+
+    {/* Active Range */}
+    <div className="absolute bg-black h-[5px] rounded-full" style={{ left: '20%', right: '20%' }}></div>
+
+    {/* Left Knob */}
+    <input
+      type="range"
+      min="50"
+      max="200"
+      defaultValue="70"
+      className="absolute w-full h-[5px] opacity-0 pointer-events-none"
+      style={{ zIndex: 10 }}
+    />
+    <span
+      className="absolute top-[-8px] h-[20px] w-[20px] bg-black rounded-full"
+      style={{ left: '20%' }}
+    ></span>
+
+    {/* Right Knob */}
+    <input
+      type="range"
+      min="50"
+      max="200"
+      defaultValue="180"
+      className="absolute w-full h-[5px] opacity-0 pointer-events-none"
+      style={{ zIndex: 10 }}
+    />
+    <span
+      className="absolute top-[-8px] h-[20px] w-[20px] bg-black rounded-full"
+      style={{ right: '20%' }}
+    ></span>
+  </div>
+
+  {/* Price Labels */}
+  <div className="flex justify-around w-full text-black font-medium text-sm">
+    <span>$50</span>
+    <span>$200</span>
+  </div>
+</div>
+
+
+<div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
+<p>Colors</p>
+
+<button className="">
+      <Image src={"/C-up-arrow.png"} width={16} height={16} alt={"filter"} className="text-black "></Image>
+    
+    </button>
+
+</div>
+
+
+<div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
+ 
+<div className="w-[37px] h-[37px] rounded-full bg-customGreen border-[2px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-customRed border-[1px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-customYellow border-[1px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-customOrange border-[1px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-customSky border-[1px] border-gray-400"></div>
+
+</div>
+
+
+
+<div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
+ 
+<div className="w-[37px] h-[37px] rounded-full bg-customBlue border-[2px] border-gray-400 flex justify-center items-center">
+<Image src={"/white-tick.png"} width={16} height={16} alt={"filter"} className="text-black "></Image>
+
+</div>
+<div className="w-[37px] h-[37px] rounded-full bg-customPurple border-[1px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-customPink border-[1px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-white border-[1px] border-gray-400"></div>
+<div className="w-[37px] h-[37px] rounded-full bg-black border-[1px] border-gray-400"></div>
+
+</div>
+
+
+
+<div className="border-[1px] w-[247px] flex justify-center items-center ml-5">
+  <hr />
+  </div>
+
+  <div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
+<p>Size</p>
+
+<button className="">
+      <Image src={"/C-up-arrow.png"} width={16} height={16} alt={"filter"} className="text-black "></Image>
+    
+    </button>
+
+</div>
+
+<div className="grid grid-cols-2 space-y-2 ml-4 mr-16">
+
+<div className=" h-[39px] w-[96px] rounded-[62px] mt-2 bg-lightGray flex justify-center items-center  text-center">
+<button className=" text-customBlack" >XX-Small</button>
+
+</div>
+
+<div className=" h-[39px] w-[88px] rounded-[62px] bg-lightGray  flex justify-center items-center   text-center">
+<button className=" text-customBlack">X-Small</button>
+
+</div>
+
+<div className=" h-[39px] w-[76px] rounded-[62px] bg-black flex justify-center items-center  text-center">
+<button className=" text-white">Small</button>
+
+</div>
+
+<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
+<button className=" text-customBlack">Medium</button>
+
+</div>
+
+<div className=" h-[39px] w-[76px] rounded-[62px] bg-black flex justify-center items-center  text-center">
+<button className=" text-white">Large</button>
+
+</div>
+
+<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
+<button className=" text-customBlack">X-Large</button>
+
+</div>
+
+<div className=" h-[39px] w-[96px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
+<button className=" text-customBlack" >XX-Large</button>
+
+</div>
+
+<div className=" h-[39px] w-[96px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
+<button className=" text-customBlack" >3X-Large</button>
+
+</div>
+
+<div className=" h-[39px] w-[98px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
+<button className=" text-customBlack" >4X-Large</button>
+
+</div>
+
+{/* ... */}
+</div>
+
+
+<div className="border-[1px] w-[247px] flex justify-center mt-4 items-center ml-5">
+  <hr />
+  </div>
+
+
+  <div className="font-satoshi text-[20px] font-bold p-4 flex justify-between ">
+<p>Dress Style</p>
+
+<button className="">
+      <Image src={"/C-up-arrow.png"} width={16} height={16} alt={"filter"} className="text-black "></Image>
+    
+    </button>
+
+</div>
+
+
+  <div className="font-satoshi text-[16px] font-normal text-gray-400 p-1 flex justify-between ml-2">
+  <p>Casual</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" mr-2"></Image>
+    
+    </button>
+    
+
+</div>
+
+<div className="font-satoshi text-[16px] text-gray-400 font-normal p-1 flex justify-between ml-2">
+
+<p>Formal</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" mr-2"></Image>
+    
+    </button>
+
+    </div>
+
+    <div className="font-satoshi text-gray-400 text-[16px] font-normal p-1 flex justify-between ml-2">
+
+<p>Party</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className=" mr-2"></Image>
+    
+    </button>
+    </div>
+
+
+    <div className="font-satoshi text-gray-400 text-[16px] font-normal p-1 flex justify-between ml-2">
+
+<p>Gym</p>
+
+<button className="">
+      <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className="mr-2 "></Image>
+    
+    </button>
+    </div>
+
+
+
+    <div className=" h-[48px] w-[247px] rounded-[62px] bg-black flex justify-center items-center  text-center ml-6">
+<button className=" text-white">Aplly Filter</button>
+
+</div>
+    
+
 </div>
 
 <StayPage/>

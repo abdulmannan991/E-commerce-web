@@ -117,6 +117,7 @@ $300
 </div>
 
 
+
 <div className="mt-6 w-[358px] lg:w-[590px]  text-center border-[1px] flex flex-col justify-center items-center mx-auto lg:mr-4">
   <hr />
 </div>
