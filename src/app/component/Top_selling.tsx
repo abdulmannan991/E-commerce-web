@@ -56,13 +56,13 @@ return(
         
         <div className="flex font-satoshi font-bold text-xl mt-2 ">
         
-        <p className=" mt-4 ml-4 ">$212</p>
+        <p className="   ml-4 ">$212</p>
           
-          <p className=" mt-4 ml-2 text-gray-400 line-through">$235</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-4 ml-2 text-xs  text-rose-400 text-center">-20%</p>
-          <p className=" mt-4 ml-[70px] lg:ml-[270px]">$145</p>
-          <p className=" mt-4 ml-[270px] hidden lg:block">$80</p>
-          <p className=" mt-4 ml-[370px] hidden lg:block">$210</p>
+          <p className="  ml-2 text-gray-400 line-through">$235</p>
+        <p className="h-[20px] w-[40px] rounded-2xl bg-red  ml-2 text-xs  text-rose-400 text-center">-20%</p>
+          <p className="  ml-[70px] lg:ml-[270px]">$145</p>
+          <p className="  ml-[270px] hidden lg:block">$80</p>
+          <p className="  ml-[370px] hidden lg:block">$210</p>
         </div>
         
         <div className="flex justify-center items-center">

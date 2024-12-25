@@ -172,7 +172,7 @@ $300
 
 
 
-<div className="mt-6 w-[130px]  border-[1px]  ml-4 lg:ml-24 lg:w-[1200px]">
+<div className="mt-6 w-[360px]  border-[1px]  ml-4 lg:ml-24 lg:w-[1200px]">
   <hr />
 </div>
 
@@ -181,7 +181,7 @@ $300
 </div>
 </div>
 
-<div className="mt-6 lg:w-0 w-[80px]  border-[1px]  -mt-[2px]  ml-[284px]">
+<div className="mt-6 lg:w-0 w-[80px]  border-[1px]  -mt-[2px]  ml-[284px] hidden lg:block">
   <hr />
 </div>
 
@@ -372,7 +372,7 @@ $300
 
                         {/* Card 5 */}
                     
-                        <div className="flex justify-center items-center mt-6 gap-6  hidden lg:block">
+                        <div className="flex justify-center items-center mt-6 gap-6 lg:ml-8  hidden lg:block">
             
             <div className="flex h-[224px] w-[358px] lg:w-[610px] lg:h-[241px] text-white border-[1px] rounded-[20px] ">
                         <div className=" mt-6 space-x-1 ml-6 ">
