@@ -1,6 +1,7 @@
 import Image from "next/image"
 import StayPage from "../component/Stay"
 import Footer from "../component/Footer"
+import Link from "next/link"
 export default function ProductDetail(){
 
     return(
@@ -148,8 +149,10 @@ $300
 
 <div className="flex justify-end items-end -mt-11">
 <div className=" h-[44px]  w-[236px] lg:h-[52px] lg:-mt-2  lg:w-[400px] rounded-[62px] bg-black flex justify-center items-center  text-center">
-<button className=" text-white">Add to Cart</button>
+<Link href={"/Cart"}>
 
+<button className=" text-white">Add to Cart</button>
+</Link>
 </div>
 </div>
 

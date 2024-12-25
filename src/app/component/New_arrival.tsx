@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 export default function NewArrival(){
 
     return(
@@ -11,9 +12,14 @@ export default function NewArrival(){
           
             
             <div className="flex space-x-4 p-4  lg:hidden">
-          <Image src={"/blackT-shirt.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+              
+              <Link href={"/Category"}>
+          <Image src={"/blackT-shirt.png"} width={198} height={200} alt={"menu"} className="h-[210px] mt-4"></Image>
+          </Link>
+          <Link href={"/Category"}>
+
           <Image src={"/Skinny.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
-          
+          </Link>
               </div>
           
           {/* Desktop */}
@@ -21,8 +27,13 @@ export default function NewArrival(){
 
 <div className="hidden lg:block grid grid-cols-4  ml-10 space-x-6 lg:grid ">
 <div className="">
-        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+
+        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden "></Image>
+        <Link href={"/Category"}>
+
+        
         <Image src={"/blackT-shirt.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4 lg:ml-16"></Image>
+        </Link>
 
 
             <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi lg:ml-16">
@@ -40,8 +51,15 @@ export default function NewArrival(){
         </div>
         
         <div className="">
+
         <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+      
+
+<Link href={"/Category"}>
+
         <Image src={"/ds.png"} width={294} height={441} alt={"menu"} className=" mt-4 rounded-[12px] hidden lg:block"></Image>
+
+        </Link>
 
             <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi">
             SKINNY FIT JEANS
@@ -61,8 +79,13 @@ export default function NewArrival(){
 
         
         <div className="">
+
+
         <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+<Link href={"/Category"}>
+
         <Image src={"/dc.png"} width={295} height={298} alt={"menu"} className="hidden -ml-10 lg:block mt-4"></Image>
+        </Link>
 
 
             <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-9">
@@ -83,10 +106,12 @@ export default function NewArrival(){
 
         
         <div className="">
-        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className=" ml-4 mt-4 lg:hidden"></Image>
+<Link href={"/Category"}>
+
         <Image src={"/dsleeve.png"} width={295} height={298} alt={"menu"} className="hidden -ml-20 lg:block mt-4"></Image>
 
-
+</Link>
             <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-[70px]">
             SLEEVE STRIPED T-SHIRT
 

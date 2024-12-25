@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function TopSelling(){
 return(
@@ -12,8 +13,15 @@ return(
         
           
           <div className="flex space-x-4 p-4 lg:gap-36 lg:hidden">
-            <Image src={"/Vertical.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+            <Link href={"/Category"}>
+            
+            <Image src={"/Vertical.png"} width={198} height={200} alt={"menu"} className="h-[210px] mt-4"></Image>
+            </Link>
+
+            <Link href={"/Category"}>
+            
         <Image src={"/Courage.png"} width={198} height={200} alt={"menu"} className=" mt-4"></Image>
+        </Link>
         
               
             </div>
@@ -22,8 +30,11 @@ return(
         <div className="hidden lg:block grid grid-cols-4 ml-10  space-x-3 lg:grid ">
         <div className="">
                 <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
-                <Image src={"/dv.png"} width={295} height={298} alt={"menu"} className=" mt-4 lg:ml-16"></Image>
+                
+            <Link href={"/Category"}>
 
+                <Image src={"/dv.png"} width={295} height={298} alt={"menu"} className=" mt-4 lg:ml-16"></Image>
+</Link>
         
                     <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi lg:ml-[70px]">
                     Vertical Striped Shirt
@@ -44,8 +55,12 @@ return(
                 
                 <div className="">
                 <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+
+            <Link href={"/Category"}>
+
                 <Image src={"/dcourage.png"} width={295} height={298} alt={"menu"} className="ml-4 mt-4"></Image>
 
+</Link>
                     <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
                     Courage Graphic T-short
 
@@ -64,8 +79,11 @@ return(
                 
                 <div className="">
                 <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
-                <Image src={"/dlo.png"} width={295} height={298} alt={"menu"} className=" mt-4 -ml-5"></Image>
 
+            <Link href={"/Category"}>
+
+                <Image src={"/dlo.png"} width={295} height={298} alt={"menu"} className=" mt-4 -ml-5"></Image>
+</Link>
         
                     <p className="lg:text-[18px] -ml-4 text-[16px] font-bold font-satoshi">
                     LOOSE FIT BERMUDA SHORTS
@@ -86,8 +104,12 @@ return(
                 
                 <div className="">
                 <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+
+            <Link href={"/Category"}>
+
                 <Image src={"/dfad.png"} width={295} height={298} alt={"menu"} className="-ml-14 mt-4"></Image>
 
+</Link>
         
                     <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-12">
                     FADED SKINNY JEANS

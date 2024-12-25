@@ -1,8 +1,24 @@
+'use client'
 import Image from "next/image"
 import StayPage from "../component/Stay"
 import Footer from "../component/Footer"
+import React, { useState } from "react";
+import FilterOverlay from "../component/Filter";
+import Link from "next/link";
 
 export default function CategoryPage(){
+
+  const [showFilter, setShowFilter] = useState(false); // State to manage overlay visibility
+
+  // Function to show the filter overlay
+  const handleShowFilter = () => {
+    setShowFilter(true);
+  };
+
+  // Function to hide the filter overlay
+  const handleCloseFilter = () => {
+    setShowFilter(false);
+  };
 
     return(
         <div>
@@ -45,17 +61,36 @@ export default function CategoryPage(){
       </span>
     </p>
    </div>
-
-    <button className="lg:hidden">
+     
+     <div>
+    <button  onClick={handleShowFilter} className="lg:hidden">
       <Image src={"/filter.png"} width={32} height={32} alt={"filter"} className="mt-5 ml-12 "></Image>
     
     </button>
+    {/* Conditionally render the FilterOverlay */}
+    {showFilter && (
+        <div
+          className={`fixed inset-0 z-50 flex justify-center items-end bg-black bg-opacity-50 transition-all ${
+            showFilter ? "translate-y-0" : "translate-y-full"
+          }`}
+        >
+          <FilterOverlay onClose={handleCloseFilter} />
+        </div>
+      )}
+</div>
 </div>
 
  <div className="grid grid-cols-2 space-x-4 pl-2  lg:grid lg:grid-cols-3 lg:ml-[380px]  lg:pl-2">
         <div className="">
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+        </Link>
+
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/CC1.png"} width={294} height={441} alt={"menu"} className="ml-5 mt-4 rounded-[12px] hidden lg:block"></Image>
+        </Link>
 
             <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
             Gradient Graphic T...
@@ -74,9 +109,11 @@ export default function CategoryPage(){
         </div>
 
         <div>
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/C2.png"} width={172} height={174} alt={"menu"} className="rounded-[10px] mt-5 lg:hidden"></Image>
         <Image src={"/CC2.png"} width={296} height={444} alt={"menu"} className="rounded-[10px] mt-5 hidden lg:block"></Image>
-        
+        </Link>
         <p className="lg:text-[20px]  text-[16px]  font-bold font-satoshi">
         Polo with Tipping De..
               </p>
@@ -94,9 +131,11 @@ export default function CategoryPage(){
         </div>
         
         <div>
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/C3.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden rounded-[12px]"></Image>
         <Image src={"/CC3.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
-
+</Link>
         
         <p className="lg:text-[20px] lg:ml-5  text-[16px] font-bold font-satoshi">
         Black Striped T-shirt
@@ -115,12 +154,18 @@ export default function CategoryPage(){
         </div>
         
         <div>
+
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/C4.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden"></Image>
         <Image src={"/CC4.png"} width={268} height={402} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
         
+        </Link>
         <p className="lg:text-[20px] lg:ml-5 text-[16px] font-bold font-satoshi">
         Skinny Fit Jeans
               </p>
+
+
         <Image src={"/D35.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 "></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-5">
@@ -135,13 +180,18 @@ export default function CategoryPage(){
         </div>
         
         <div>
+
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/C5.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden"></Image>
         <Image src={"/CC5.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
-
+</Link>
 
         
         <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi lg:ml-5">
         Checkered Shirt
+        
+        
               </p>
         <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 "></Image>
 
@@ -155,9 +205,12 @@ export default function CategoryPage(){
         </div>
         
         <div>
+
+        <Link href={"/Product_Detail"}>
+
         <Image src={"/C6.png"} width={172} height={174} alt={"menu"} className=" mt-4  lg:hidden"></Image>
         <Image src={"/CC6.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
-
+</Link>
 
         
         <p className="lg:text-[20px]  text-[16px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-5">
@@ -179,8 +232,10 @@ export default function CategoryPage(){
 
         <div>
         {/* <Image src={"/CC7.png"} width={172} height={174} alt={"menu"} className=" mt-4  lg:hidden"></Image> */}
+        <Link href={"/Product_Detail"}>
+        
         <Image src={"/CC7.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
-
+</Link>
 
         
         <p className=" lg:text-[20px] text-[16px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-5 hidden lg:block">
@@ -203,8 +258,11 @@ export default function CategoryPage(){
 
         <div>
         {/* <Image src={"/CC8.png"} width={172} height={174} alt={"menu"} className=" mt-4  lg:hidden"></Image> */}
+       
+        <Link href={"/Product_Detail"}>
+       
         <Image src={"/CC8.png"} width={294} height={441} alt={"menu"} className=" mt-4 rounded-[12px] hidden lg:block"></Image>
-
+</Link>
         
         <p className="lg:text-[20px]  text-[16px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-1 hidden lg:block">
         Sleeve Striped T-shirt
@@ -227,13 +285,18 @@ export default function CategoryPage(){
 
         <div>
         {/* <Image src={"/CC9.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden"></Image> */}
+       
+        <Link href={"/Product_Detail"}>
+       
         <Image src={"/CC9.png"} width={296} height={444} alt={"menu"} className=" mt-4 rounded-[12px] hidden lg:block"></Image>
-
+</Link>
         
         <p className="  text-[16px] lg:text-[20px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-2 hidden lg:block">
         Sleeve Striped T-shirt
               </p>
         <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="lg:ml-2 lg:mt-2 hidden lg:block"></Image>
+
+
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-2 hidden lg:block">
         
