@@ -11,7 +11,7 @@ export default function Navbar(){
 {/* Mobile Nav */}
     <div className="flex items-center sm:hidden">
         <Image src={"/mobnav.png"} width={24} height={24} alt={"menu"} className="mt-4 ml-2"></Image>
-        <p className="font-integral font-bold text-base leading-6 ml-4 mt-4  ">SHOP.CO</p>
+        <p className="font-integral font-bold text-base leading-6 ml-4 mt-4 text-[25px] ">SHOP.CO</p>
 
         <div className="flex justify-end gap-4 mt-4  w-full mr-2">
   <i className="fas fa-search text-lg"></i>

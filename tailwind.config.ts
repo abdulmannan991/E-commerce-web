@@ -25,6 +25,7 @@ const config: Config = {
         customPurple: '#7D06F5',
         customPink: '#F506A4',
         lightGray: '#F0F0F0',
+        customfilter : '#00000033',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
