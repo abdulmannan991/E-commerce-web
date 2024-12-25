@@ -1,6 +1,5 @@
 import Image from "next/image"
-import StayPage from "../component/Stay"
-import Footer from "../component/Footer"
+
 export default function CartPage(){
 
     return(
