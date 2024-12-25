@@ -3,7 +3,8 @@ export default function Footer(){
 
 return(
 <div>
-<div className="lg:hidden  -mt-[700px]">
+
+<div className="lg:hidden  -mt-[650px]">
     <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
       <p className="font-satoshi text-gray-500 text-[14px] mt-2 ml-2">
       We have clothes that suits your style and which you are proud to wear. From women to men.
@@ -81,7 +82,7 @@ return(
     <li className="text-[35px] text-black font-bold ">SHOP.CO</li>
     <li className="w-[260px] mt-4">We have clothes that suit your style and which you are proud to wear. From women to men.</li>
     <li className="mt-2 ml-2">
-      <Image src={"/dsocial.png"} height={28} width={148} className="w-96 h-[28px]"  alt="social" />
+      <Image src={"/Ssocial.png"} height={28} width={148} className="h-[28px] w-[148px]  hidden lg:block"  alt="social" />
     </li>
   </ul>
 
@@ -146,7 +147,6 @@ return(
 
 </div>
 </div>
-
 
 </div>
 );

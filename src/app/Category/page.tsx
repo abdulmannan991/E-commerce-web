@@ -615,7 +615,6 @@ export default function CategoryPage(){
 <StayPage/>
 <Footer/>
 
-<br /><br /><br /><br />
         </div>
     )
 }
