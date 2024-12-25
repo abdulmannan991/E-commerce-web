@@ -17,8 +17,9 @@ export default function NewArrival(){
               </div>
           
           {/* Desktop */}
+          
 
-<div className="hidden lg:block grid grid-cols-4   space-x-6 lg:grid ">
+<div className="hidden lg:block grid grid-cols-4  ml-10 space-x-6 lg:grid ">
 <div className="">
         <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
         <Image src={"/blackT-shirt.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4 lg:ml-16"></Image>
@@ -43,7 +44,7 @@ export default function NewArrival(){
         <Image src={"/ds.png"} width={294} height={441} alt={"menu"} className=" mt-4 rounded-[12px] hidden lg:block"></Image>
 
             <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi">
-            Gradient Graphic T...
+            SKINNY FIT JEANS
               </p>
         <Image src={"/D35.png"} width={106} height={16} alt={"menu"} className="  "></Image>
 
@@ -61,18 +62,18 @@ export default function NewArrival(){
         
         <div className="">
         <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
-        <Image src={"/dc.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4"></Image>
+        <Image src={"/dc.png"} width={295} height={298} alt={"menu"} className="hidden -ml-10 lg:block mt-4"></Image>
 
 
-            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi">
+            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-9">
             CHECKERED SHIRT
 
               </p>
-        <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="  "></Image>
+        <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="  -ml-9"></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 ">
         
-        <p className="    ">$180</p>
+        <p className="  -ml-9  ">$180</p>
           
        
 
@@ -83,20 +84,20 @@ export default function NewArrival(){
         
         <div className="">
         <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
-        <Image src={"/dsleeve.png"} width={295} height={298} alt={"menu"} className="hidden lg:block mt-4"></Image>
+        <Image src={"/dsleeve.png"} width={295} height={298} alt={"menu"} className="hidden -ml-20 lg:block mt-4"></Image>
 
 
-            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi">
+            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-[70px]">
             SLEEVE STRIPED T-SHIRT
 
               </p>
-        <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="  "></Image>
+        <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="  -ml-[70px]"></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 ">
         
-        <p className="    ">$130</p>
+        <p className="  -ml-[68px] ">$130</p>
           
-          <p className=" ml-2  text-gray-400 line-through">$160</p>
+          <p className=" ml-2 text-gray-400 line-through">$160</p>
         <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center">-30%</p>
        
 
@@ -109,7 +110,9 @@ export default function NewArrival(){
         </div>
 
  
+{/* Desktop */}
 
+{/* Mob */}
  
           
               <div className="lg:hidden flex space-x-4 p-4 lg:flex lg:justify-evenly">

@@ -19,6 +19,98 @@ return(
             </div>
             {/* Desktop */}
         
+        <div className="hidden lg:block grid grid-cols-4 ml-10  space-x-3 lg:grid ">
+        <div className="">
+                <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+                <Image src={"/dv.png"} width={295} height={298} alt={"menu"} className=" mt-4 lg:ml-16"></Image>
+
+        
+                    <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi lg:ml-[70px]">
+                    Vertical Striped Shirt
+
+        
+                      </p>
+                <Image src={"/D5.png"} width={106} height={16} alt={"menu"} className="ml-2 lg:ml-[70px] ml-6 "></Image>
+        
+                <div className="flex font-satoshi font-bold text-xl  mt-1 ">
+                
+                <p className="  ml-5 lg:ml-[70px] ">$212</p>
+                <p className=" ml-2  text-gray-400 line-through">$232</p>
+                <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center">-20%</p>
+                 
+                
+                </div>
+                </div>
+                
+                <div className="">
+                <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+                <Image src={"/dcourage.png"} width={295} height={298} alt={"menu"} className="ml-4 mt-4"></Image>
+
+                    <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
+                    Courage Graphic T-short
+
+                      </p>
+                <Image src={"/D4.png"} width={106} height={16} alt={"menu"} className="  ml-6"></Image>
+        
+                <div className="flex font-satoshi font-bold text-xl  mt-1 ml-6">
+                
+                <p className="    ">$145</p>
+                  
+                 
+        
+                </div>
+                </div>
+        
+                
+                <div className="">
+                <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+                <Image src={"/dlo.png"} width={295} height={298} alt={"menu"} className=" mt-4 -ml-5"></Image>
+
+        
+                    <p className="lg:text-[18px] -ml-4 text-[16px] font-bold font-satoshi">
+                    LOOSE FIT BERMUDA SHORTS
+        
+                      </p>
+                <Image src={"/D3.png"} width={106} height={16} alt={"menu"} className=" -ml-4 "></Image>
+        
+                <div className="flex font-satoshi font-bold text-xl  mt-1 -ml-4">
+                
+                <p className="    ">$80</p>
+                  
+               
+        
+                </div>
+                </div>
+        
+        
+                
+                <div className="">
+                <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+                <Image src={"/dfad.png"} width={295} height={298} alt={"menu"} className="-ml-14 mt-4"></Image>
+
+        
+                    <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-12">
+                    FADED SKINNY JEANS
+        
+                      </p>
+                <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="  -ml-12"></Image>
+        
+                <div className="flex font-satoshi font-bold text-xl  mt-1 -ml-12">
+                
+                <p className="    ">$210</p>
+                  
+                
+        
+                </div>
+                </div>
+                
+        
+                
+                
+                </div>
+
+
+{/*         
             <div className="flex space-x-4 p-4 lg:gap-12 lg:flex hidden lg:block">
             <Image src={"/dv.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
         <Image src={"/dcourage.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
@@ -45,16 +137,18 @@ return(
               Courage Graphic T-short
               </p>
             
-            </div>
-            <div className="flex lg:gap-48">
+            </div> */}
+
+            {/* Lg : hidden sm visible */}
+            <div className="flex lg:gap-48 lg:hidden">
             <Image  src={"/Vs.png"} width={100} height={100} alt={"menu"} className=" lg:mt-4 ml-4"></Image>
         <Image src={"/Cc.png"} width={100} height={100} alt={"menu"} className=" lg:mt-4 ml-28"></Image>
         <Image  src={"/Vs.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-4 hidden lg:block"></Image>
         <Image src={"/Cc.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-28 hidden lg:block"></Image>
         
         </div>
-        
-        <div className="flex font-satoshi font-bold text-xl mt-2 ">
+        {/* Lg : hidden */}
+        <div className="flex font-satoshi font-bold text-xl mt-2 lg:hidden">
         
         <p className="   ml-4 ">$212</p>
           
