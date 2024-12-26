@@ -9,7 +9,7 @@ import StayPage from "./component/Stay";
 export default function Home() {
   return (
    <div className="">
-    <div className="h-[853px] w-[390px] flex  mt-2 lg:h-[663px] lg:mt-10 lg:w-[1440px]"  style={{background: "#F2F0F1"} }>
+    <div className= " h-[853px] w-[390px] flex  mt-2 lg:h-[663px] lg:mt-10 lg:w-[1440px]"  style={{background: "#F2F0F1"} }>
 
   <div>
   <p className="font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6 lg:hidden">

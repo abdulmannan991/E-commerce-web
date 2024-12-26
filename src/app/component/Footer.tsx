@@ -4,7 +4,7 @@ export default function Footer(){
 return(
 <div>
 
-<div className="lg:hidden  overflow-x-hidden -mt-[650px]">
+<div className="lg:hidden   -mt-[650px]">
     <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
       <p className="font-satoshi text-gray-500 text-[14px] mt-2 ml-2">
       We have clothes that suits your style and which you are proud to wear. From women to men.

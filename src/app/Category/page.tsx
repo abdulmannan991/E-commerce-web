@@ -21,7 +21,7 @@ export default function CategoryPage(){
   };
 
     return(
-        <div className="">
+        <div className="outline outline-1 outline-red-500 overflow-x-clip">
   <div>
           <div className="mt-6 w-[358px] lg:ml-12 lg:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
