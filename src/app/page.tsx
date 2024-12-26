@@ -8,7 +8,7 @@ import StayPage from "./component/Stay";
 
 export default function Home() {
   return (
-   <div className="overflow-x-hidden">
+   <div className="">
     <div className="h-[853px] w-[390px] flex  mt-2 lg:h-[663px] lg:mt-10 lg:w-[1440px]"  style={{background: "#F2F0F1"} }>
 
   <div>

@@ -6,7 +6,7 @@ export default function ProductDetail(){
 
     return(
 
-        <div className="overflow-x-hidden">
+        <div className="">
           <div className="mt-6 w-[358px] lg:w-[1240px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
 </div>

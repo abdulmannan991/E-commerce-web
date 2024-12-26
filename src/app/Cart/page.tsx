@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function CartPage(){
 
     return(
-        <div className="overflow-x-hidden">
+        <div className="">
             
             <div>
           <div className="mt-6 w-[358px] lg:ml-12 lg:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">

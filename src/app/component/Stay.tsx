@@ -3,13 +3,13 @@ export default function StayPage(){
 
     return(
 
-        <div>
+        <div className="">
             {/* Stay upto date */}
 
             <div className="w-[392px] h-[846px] lg:w-[1441px] lg:h-[499px] bg-lightGray lg:mt-[200px] mt-[150px]  ">
 
 <div className="flex justify-center items-center ">
-<div className="w-[358px] h-[293px] lg:w-[1240px] lg:h-[180px]   flex justify-center rounded-[20px] -mt-[100px] bg-black">
+<div className="w-[358px] h-[293px] lg:w-[1240px] lg:h-[180px]   flex justify-center rounded-[20px] -ml-1 -mt-[100px] bg-black">
             <div className=" font-integral font-bold text-white text-[32px] mt-6 lg:flex lg:justify-start lg:items-start gap-2">
             
             <p className="hidden lg:block w-[451px] h-[94px]">STAY UPTO DATE ABOUT OUR LATEST OFFER</p>
