@@ -95,7 +95,7 @@ export default function CategoryPage(){
             <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
             Gradient Graphic T...
               </p>
-        <Image src={"/D35.png"} width={106} height={16} alt={"menu"} className="ml-2 lg:ml-6 ml-6 "></Image>
+        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="ml-2 lg:ml-6 ml-6 "></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 ">
         
@@ -166,7 +166,7 @@ export default function CategoryPage(){
               </p>
 
 
-        <Image src={"/D35.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 "></Image>
+        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 "></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-5">
         

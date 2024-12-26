@@ -64,7 +64,7 @@ export default function NewArrival(){
             <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi">
             SKINNY FIT JEANS
               </p>
-        <Image src={"/D35.png"} width={106} height={16} alt={"menu"} className="  "></Image>
+        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="  "></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 ">
         
