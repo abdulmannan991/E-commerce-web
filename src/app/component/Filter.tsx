@@ -7,7 +7,7 @@ type FilterOverlayProps = {
 
 const FilterOverlay: React.FC<FilterOverlayProps> = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 z-50 bg-white lg:hidden overflow-y-auto">
+    <div className="fixed inset-0 z-50 bg-white lg:hidden overflow-y-auto overflow-x-clip">
       {/* Navbar at the top */}
       <div className="font-sans text-xs leading-4 bg-black h-[34px] w-full pt-[9px] pb-[9px] mx-auto sm:hidden">
         <p className="text-white text-center">
