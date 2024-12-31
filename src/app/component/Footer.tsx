@@ -82,7 +82,8 @@ return(
     <li className="text-[35px] text-black font-bold ">SHOP.CO</li>
     <li className="w-[260px] mt-4">We have clothes that suit your style and which you are proud to wear. From women to men.</li>
     <li className="mt-2 ml-2">
-      <Image src={"/Ssocial.png"} height={28} width={148} className="h-[28px] w-[148px]  hidden lg:block"  alt="social" />
+    <Image src={"/Social.png"} height={28} width={148} alt="social" className="w-[148px] h-[28px]"></Image>
+
     </li>
   </ul>
 

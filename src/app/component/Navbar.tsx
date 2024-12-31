@@ -5,15 +5,15 @@ export default function Navbar(){
 
     return (
 <div>
-    <div className="font-sans text-xs leading-4 bg-black h-[34px] w-full pt-[9px] pb-[9px] mx-auto sm:hidden">
+    <div className="font-sans text-xs leading-4 bg-black h-[34px] w-full pt-[9px] pb-[9px] mx-auto lg:hidden">
         <p className="text-white text-center">Sign up and get 20% off to your first order. Sign Up Now</p>
     </div>
 {/* Mobile Nav */}
-    <div className="flex items-center sm:hidden">
+    <div className="flex items-center lg:hidden">
         <Image src={"/mobnav.png"} width={24} height={24} alt={"menu"} className="mt-4 ml-2"></Image>
         <p className="font-integral font-bold text-base leading-6 ml-4 mt-4 text-[25px] ">SHOP.CO</p>
 
-        <div className="flex justify-end gap-4 mt-4  w-full mr-2">
+        <div className="flex justify-end gap-4 mt-4  w-full mr-2 hidden">
   <i className="fas fa-search text-lg"></i>
 
   <i className="fas fa-shopping-cart text-lg"></i>
@@ -24,12 +24,12 @@ export default function Navbar(){
     </div>
 {/* Desktop */}
 
-<div className="font-sans text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden sm:block ">
+<div className="font-sans text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden lg:block ">
   <p className="text-white text-center text-sm">Sign up and get 20% off your first order. Sign Up Now</p>
   {/* <i className="fas fa-times text-white text-lg text-center ml-[1328px] w-20 h-20  mb-10"></i> */}
 
 </div>
-<div className="items-center sm:block hidden">
+<div className="items-center lg:block hidden">
     <div className="flex">
         <p className="font-integral font-bold text-[32px] w-[160px] h-[22px] leading-6 mt-4  ml-12">SHOP.CO</p>
         <p className="font-satoshi text-[16px]  mt-4  ml-12">shop</p>
@@ -54,7 +54,7 @@ export default function Navbar(){
 
 </div>
 
-<div className="sm:flex justify-end items-end -mt-6 hidden  space-x-6">
+<div className="flex justify-end items-end -mt-6   space-x-6">
 <i className="fas fa-shopping-cart text-lg  "></i>
 
 <i className="fas fa-user-circle text-lg"></i>
