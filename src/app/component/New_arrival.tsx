@@ -136,13 +136,22 @@ export default function NewArrival(){
 {/* Mob */}
  
           
-          <div className="flex justify-center items-center mt-6 lg:mt-0">
-          <button className="smMax:h-[46px] smMax:w-[250px] h-[46px] w-[358px] lg:h-[52px] lg:w-[218px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
-            <p>
-              View all
-            </p>
-          </button>
-          </div> 
+<div className="flex justify-center items-center mt-6 lg:mt-0">
+  <button className="smMax:h-[46px] smMax:w-[250px] h-[46px] w-[358px] lg:h-[52px] lg:w-[218px] rounded-[62px] bg-white border-[1px] border-transparent font-satoshi font-medium flex justify-center items-center mt-4 relative overflow-hidden group transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-[#ff5f6d]">
+    
+    {/* Gradient Background Animation */}
+    <span className="absolute inset-0 bg-gradient-to-r bg-white border-[1px] rounded-[62px] border-gray-500 opacity-40 group-hover:opacity-100 group-hover:bg-gradient-to-r group-hover:from-[#ff5f6d] group-hover:to-[#ffc371] transition-all duration-700 ease-in-out"></span>
+
+    {/* Border Animation */}
+    <span className="absolute inset-0 border-[3px] border-transparent group-hover:border-[#ff5f6d] group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 ease-in-out"></span>
+
+    {/* Animated Text */}<p className="relative text-gray-800 text-lg font-semibold transition-all duration-500 ease-in-out group-hover:text-[#000000] group-hover:tracking-wide group-hover:drop-shadow-[0_0_12px_rgba(255,99,71,0.8)]">
+
+      View all
+    </p>
+  </button>
+</div>
+
           
           <div className="flex justify-center items-center">
           <div className=" w-[358px] lg:w-[1240px] border-[1px]  mt-24 ">

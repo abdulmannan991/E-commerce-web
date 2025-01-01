@@ -557,48 +557,48 @@ export default function CategoryPage(){
 
 <div className="grid grid-cols-2 space-y-2 ml-4 mr-16">
 
-<div className=" h-[39px] w-[96px] rounded-[62px] mt-2 bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack" >XX-Small</button>
+<div className=" h-[39px] w-[96px] rounded-[62px] mt-2 bg-lightGray hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white" >XX-Small</button>
 
 </div>
 
-<div className=" h-[39px] w-[88px] rounded-[62px] bg-lightGray  flex justify-center items-center   text-center">
-<button className=" text-customBlack">X-Small</button>
+<div className=" h-[39px] w-[88px] rounded-[62px] bg-lightGray hover:bg-black  flex justify-center items-center   text-center">
+<button className=" text-customBlack hover:text-white">X-Small</button>
 
 </div>
 
-<div className=" h-[39px] w-[76px] rounded-[62px] bg-black flex justify-center items-center  text-center">
-<button className=" text-white">Small</button>
+<div className=" h-[39px] w-[76px] rounded-[62px] bg-lightGray hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white">Small</button>
 
 </div>
 
-<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack">Medium</button>
+<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white">Medium</button>
 
 </div>
 
-<div className=" h-[39px] w-[76px] rounded-[62px] bg-black flex justify-center items-center  text-center">
-<button className=" text-white">Large</button>
+<div className=" h-[39px] w-[76px] rounded-[62px] bg-lightGray hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white">Large</button>
 
 </div>
 
-<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack">X-Large</button>
+<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray  hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white">X-Large</button>
 
 </div>
 
-<div className=" h-[39px] w-[96px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack" >XX-Large</button>
+<div className=" h-[39px] w-[96px] rounded-[62px] bg-lightGray  hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white" >XX-Large</button>
 
 </div>
 
-<div className=" h-[39px] w-[96px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack" >3X-Large</button>
+<div className=" h-[39px] w-[96px] rounded-[62px] bg-lightGray  hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white" >3X-Large</button>
 
 </div>
 
-<div className=" h-[39px] w-[98px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack" >4X-Large</button>
+<div className=" h-[39px] w-[98px] rounded-[62px] bg-lightGray  hover:bg-black flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white" >4X-Large</button>
 
 </div>
 

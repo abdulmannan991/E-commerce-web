@@ -24,21 +24,21 @@ export default function Navbar(){
     </div>
 {/* Desktop */}
 
-<div className="font-sans text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden lg:block ">
+<div className="font-sans flex-col justify-between items-center text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden lg:block ">
   <p className="text-white text-center text-sm">Sign up and get 20% off your first order. Sign Up Now</p>
-  {/* <i className="fas fa-times text-white text-lg text-center ml-[1328px] w-20 h-20  mb-10"></i> */}
+  <p  className= "cursor-pointer text-white text-center text-sm ml-[850px] -mt-5">X</p>
 
 </div>
 <div className="items-center lg:block hidden">
     <div className="flex">
         <p className="font-integral font-bold text-[32px] w-[160px] h-[22px] leading-6 mt-4  ml-12">SHOP.CO</p>
-        <p className="font-satoshi text-[16px]  mt-4  ml-12">shop</p>
+        <p className="font-satoshi text-[16px]  mt-4 cursor-pointer ml-12">shop</p>
   <i className="fas fa-chevron-down ml-2 text-gray-500 group-hover:text-gray-700 mt-[20px]"></i>
-  <p className="font-satoshi text-[16px]  mt-4  ml-12">On Sale</p>
+  <p className="font-satoshi text-[16px] cursor-pointer  mt-4  ml-12">On Sale</p>
 
-  <p className="font-satoshi text-[16px]  mt-4  ml-12">New Arrivals</p>
+  <p className="font-satoshi text-[16px]  mt-4 cursor-pointer ml-12">New Arrivals</p>
 
-  <p className="font-satoshi text-[16px]  mt-4  ml-12">Brands</p>
+  <p className="font-satoshi text-[16px]  mt-4 cursor-pointer ml-12">Brands</p>
 
   <div className="relative w-full max-w-md mx-auto mt-4">
   <i className="fas fa-search absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-600"></i>
