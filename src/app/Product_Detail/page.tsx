@@ -1,8 +1,30 @@
+'use client'
 import Image from "next/image"
 import StayPage from "../component/Stay"
 import Footer from "../component/Footer"
 import Link from "next/link"
+import { useState } from "react"
 export default function ProductDetail(){
+
+const [Counter,setincrease] =  useState(0)
+
+
+  const handleIncrease = ()=>{
+    if(Counter<100){
+     setincrease(Counter +  1)
+    }
+  }
+
+
+  const handleDecreases = ()=>{
+    if(Counter>0){
+     setincrease(Counter -  1)
+    }
+  }
+
+   
+    
+
 
     return(
 
@@ -106,23 +128,23 @@ $300
 
 <div className="flex gap-4 mt-4 lg:flex  lg:flex-row lg:items-end lg:ml-[770px] ">
 
-<div className=" h-[39px] w-[74px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack" >Small</button>
+<div className=" h-[39px] w-[74px] rounded-[62px] bg-lightGray hover:bg-black  flex justify-center items-center  text-center">
+<button className="text-customBlack hover:text-white" >Small</button>
 
 </div>
 
-<div className=" h-[39px] w-[90px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack">Medium</button>
+<div className=" h-[39px] w-[90px] rounded-[62px] bg-lightGray hover:bg-black  flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white">Medium</button>
 
 </div>
 
-<div className=" h-[39px] w-[76px] rounded-[62px] bg-black flex justify-center items-center  text-center">
-<button className=" text-white">Large</button>
+<div className=" h-[39px] w-[76px] rounded-[62px] bg-lightGray hover:bg-black  flex justify-center items-center  text-center">
+<button className="text-customBlack hover:text-white">Large</button>
 
 </div>
 
-<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center">
-<button className=" text-customBlack">X-Large</button>
+<div className=" h-[39px] w-[89px] rounded-[62px] bg-lightGray hover:bg-black  flex justify-center items-center  text-center">
+<button className=" text-customBlack hover:text-white">X-Large</button>
 
 </div>
 
@@ -137,9 +159,9 @@ $300
 
 
 <div className="mt-4 ml-4 h-[44px] w-[110px] lg:h-[52px] lg:w-[170px] lg:ml-[780px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
-<button className=" text-customBlack  text-[24px]">-</button>
-<p>1</p>
-<button className=" text-customBlack text-[24px]">+</button>
+<button onClick={handleDecreases} className=" text-customBlack  text-[24px]">-</button>
+<p> {`${Counter}`} </p>
+<button onClick={handleIncrease} className=" text-customBlack text-[24px]">+</button>
 
 
 
@@ -543,4 +565,4 @@ $300
 
         </div>
     )
-}
+  }

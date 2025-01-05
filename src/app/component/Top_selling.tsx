@@ -1,11 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
+import ScrollAnimation from "./Scroll_animation"
 
 export default function TopSelling(){
 return(
 
     <div>
-        
+        <ScrollAnimation>
         <div>
           <p className="font-integral text-[32px] lg:text-[48px] font-bold text-center mt-6 ">
           Top Selling
@@ -187,6 +188,7 @@ return(
         </div>
          */}
         </div>
+        
         <div className="flex justify-center items-center mt-6 lg:mt-0">
   <button className="smMax:h-[46px] smMax:w-[250px] h-[46px] w-[358px] lg:h-[52px] lg:w-[218px] rounded-[62px] bg-white border-[1px] border-transparent font-satoshi font-medium flex justify-center items-center mt-4 relative overflow-hidden group transition-all duration-500 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-[#ff5f6d]">
     
@@ -203,6 +205,7 @@ return(
   </button>
 </div>
 
+</ScrollAnimation>
       
         
     </div>
