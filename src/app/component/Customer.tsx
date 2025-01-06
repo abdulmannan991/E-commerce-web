@@ -1,11 +1,12 @@
 import Image from "next/image"
+import ScrollAnimation from "./Scroll_animation"
 
 export default function Customer(){
 
     return(
 
         <div>
-            
+            <ScrollAnimation>
             <div className="ml-4 font-integral text-[32px] lg:ml-28 lg:text-[48px] text-start mt-[48px] leading-tight font-bold">
                   Our Happy <span className="block lg:inline-block">Customers</span>
             
@@ -153,6 +154,7 @@ export default function Customer(){
             
             
                 </div>
+                </ScrollAnimation>
             
             
         </div>

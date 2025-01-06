@@ -1,11 +1,12 @@
 import Image from "next/image"
+import ScrollAnimation from "./Scroll_animation"
 
 export default function Browse(){
 
     return(
         <div>
-          
-              <div className="flex justify-center items-center mt-16 lg:hidden">
+          <ScrollAnimation>
+              <div className="flex justify-center items-center mt-16 lg:hidden ">
           <div className="flex flex-col justify-start items-center sm:h-[1250px] h-[975px] max-w-[1023px] w-full rounded-[20px]" style={{ background: "#F2F0F1" }}>
             <h1 className="font-integral text-[32px] text-center mt-[48px] leading-tight font-bold">
               BROWSE BY <span className="block">Dress STYLE</span>
@@ -45,6 +46,7 @@ export default function Browse(){
             </div>
           </div>
         </div>
+        </ScrollAnimation>
         
         </div>
 

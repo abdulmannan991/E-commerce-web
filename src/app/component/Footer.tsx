@@ -1,8 +1,11 @@
 import Image from "next/image";
+import ScrollAnimation from "./Scroll_animation";
 export default function Footer(){
 
 return(
 <div>
+
+<ScrollAnimation>
 
 <div className="lg:hidden   -mt-[650px]">
     <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
@@ -148,7 +151,7 @@ return(
 
 </div>
 </div>
-
+</ScrollAnimation>
 </div>
 );
 

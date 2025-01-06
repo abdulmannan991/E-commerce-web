@@ -9,7 +9,7 @@ export default function NewArrival(){
        <div className="">
         <ScrollAnimation>
           <div className="">
-            <p className="smMax:mt-20 mt-20 font-integral text-[32px] font-bold text-center mt-6 lg:text-[48px]">
+            <p className="smMax:mt-20 mt-20 font-integral text-[32px] font-bold text-center  lg:text-[48px]">
             NEW ARRIVALS
             </p>
           

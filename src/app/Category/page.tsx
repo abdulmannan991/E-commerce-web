@@ -5,6 +5,7 @@ import Footer from "../component/Footer"
 import React, { useState } from "react";
 import FilterOverlay from "../component/Filter";
 import Link from "next/link";
+import ScrollAnimation from "../component/Scroll_animation";
 
 export default function CategoryPage(){
 
@@ -22,6 +23,7 @@ export default function CategoryPage(){
 
     return(
         <div className=" overflow-x-clip">
+
   <div>
           <div className="mt-6 w-[358px] lg:ml-12 lg:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
@@ -52,15 +54,7 @@ export default function CategoryPage(){
     Showing 1-10 of 100 Products
     </p>
     
-   <div className=" hidden lg:block ">
-   <p className="text-[14px] text-gray-400 lg:-mr-[170px]">
-      Showing 1-10 of 100 Products Sort by: 
-      <span className="text-black font-bold"> Most Popular
-      <span className="text-black">&#x25BC;</span>
-
-      </span>
-    </p>
-   </div>
+   
      
      <div>
     <button  onClick={handleShowFilter} className="lg:hidden">
@@ -79,6 +73,7 @@ export default function CategoryPage(){
       )}
 </div>
 </div>
+<ScrollAnimation>
 
  <div className="grid grid-cols-2 space-x-4 pl-2  lg:grid lg:grid-cols-3 lg:ml-[380px]  lg:pl-2">
         <div className="">
@@ -674,6 +669,7 @@ export default function CategoryPage(){
     
 
 </div>
+</ScrollAnimation>
 
 <StayPage/>
 <Footer/>

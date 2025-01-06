@@ -1,10 +1,12 @@
 import Image from "next/image"
+import ScrollAnimation from "../component/Scroll_animation"
 
 export default function CartPage(){
 
     return(
         <div className="overflow-x-clip">
             
+            <ScrollAnimation>
             <div>
           <div className=" mt-6 w-[358px] lg:ml-12 lg:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
@@ -217,7 +219,8 @@ export default function CartPage(){
 
 
 </div>
-
+</ScrollAnimation>
+<ScrollAnimation>
 <div className="w-[392px] h-[846px] lg:w-[1441px] lg:h-[499px] bg-lightGray lg:mt-[200px] mt-[550px]  ">
 
 <div className="flex justify-center items-center ">
@@ -345,16 +348,16 @@ export default function CartPage(){
    </div>
  </div>
  
- 
+
  
  
        
      </div>
  
-     
+     </ScrollAnimation>
  {/* Desktop */}
  
- 
+ <ScrollAnimation>
  <div className="lg:flex hidden flex-wrap justify-between items-start mr-12 mt-12 ml-10 lg:-mt-[400px]">
    <ul className="  font-satoshi text-[14px] font-normal text-gray-500 w-[91px] leading-7">
      <li className="text-[35px] text-black font-bold ">SHOP.CO</li>
@@ -425,6 +428,7 @@ export default function CartPage(){
  
  </div>
  </div>
+ </ScrollAnimation>
  
  
 

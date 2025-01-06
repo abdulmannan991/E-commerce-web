@@ -4,6 +4,7 @@ import StayPage from "../component/Stay"
 import Footer from "../component/Footer"
 import Link from "next/link"
 import { useState } from "react"
+import ScrollAnimation from "../component/Scroll_animation"
 export default function ProductDetail(){
 
 const [Counter,setincrease] =  useState(0)
@@ -29,6 +30,7 @@ const [Counter,setincrease] =  useState(0)
     return(
 
         <div className="">
+          <ScrollAnimation>
           <div className="mt-6 w-[358px] lg:w-[1240px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
 </div>
@@ -209,8 +211,10 @@ $300
 <div className="mt-6 lg:w-0 w-[80px]  border-[1px]  -mt-[2px]  ml-[284px] hidden lg:block">
   <hr />
 </div>
+     
+</ScrollAnimation>
 
-
+<ScrollAnimation>
 <div className="flex gap-2">
 <p className="font-satoshi font-bold text-[20px] mt-4 ml-4 lg:mt-2">
         All Reviews 
@@ -480,7 +484,9 @@ $300
 
 </div>
 </div>
+</ScrollAnimation>
 
+<ScrollAnimation>
 
 <div>
           <div className="flex justify-center items-center">
@@ -559,6 +565,7 @@ $300
       
      
         </div>
+        </ScrollAnimation>
         <StayPage/>    
         <Footer/> 
              

@@ -1,3 +1,5 @@
+import ScrollAnimation from "./Scroll_animation";
+
 export default function StayPage(){
 
 
@@ -5,7 +7,7 @@ export default function StayPage(){
 
         <div className="">
             {/* Stay upto date */}
-
+            <ScrollAnimation>
             <div className="w-[392px] h-[846px] lg:w-[1441px] lg:h-[499px] bg-lightGray lg:mt-[200px] mt-[150px]  ">
 
 <div className="flex justify-center items-center ">
@@ -69,6 +71,7 @@ export default function StayPage(){
 </div>
 
   </div>
+</ScrollAnimation>
            
         </div>
     )
