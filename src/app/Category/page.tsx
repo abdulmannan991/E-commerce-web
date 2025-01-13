@@ -25,15 +25,15 @@ export default function CategoryPage(){
         <div className=" overflow-x-clip">
 
   <div>
-          <div className="mt-6 w-[358px] lg:ml-12 lg:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+          <div className=" mt-6 w-full max-w-[1441px] xl:ml-12 xl:w-[1340px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
   <hr />
 
   </div>
   </div>
   
 
-  <div>
-    <ul className="flex gap-2 lg:text-[16px] lg:ml-20 text-gray-500 mt-4 ml-4 lg:gap-4">
+  <div className="">
+    <ul className="  flex gap-2 xl:text-[16px] xl:ml-20 text-gray-500 mt-4 ml-4 xl:gap-4">
         <li>Home  </li>
         <li>
                           <Image src={"/C-right-arrow.png"} width={6.5} height={11.5} alt={"right arrow"} className="mt-2 "></Image>
@@ -45,26 +45,26 @@ export default function CategoryPage(){
 </div>
 
 
-<div className="flex lg:flex lg:justify-between lg:items-center lg:space-x-4 lg:px-40">
-    <p className="font-satoshi font-bold text-[24px] lg:text-[32px] mt-4 ml-4 lg:ml-[250px] ">
+<div className=" flex xl:flex xl:justify-between xl:items-center xl:space-x-4 xl:px-40 ">
+    <p className="smMax:text-[18px] font-satoshi font-bold text-[24px] xl:text-[32px] mt-4 ml-4 xl:ml-[250px] ">
     Casual
     </p>
 
-    <p className="lg:hidden text-[14px] text-gray-400 mt-7 ml-2 ">
+    <p className="smMax:text-[12px] smMax:mt-6  xl:hidden text-[14px] text-gray-400 mt-7 ml-2 ">
     Showing 1-10 of 100 Products
     </p>
     
    
      
      <div>
-    <button  onClick={handleShowFilter} className="lg:hidden">
-      <Image src={"/filter.png"} width={32} height={32} alt={"filter"} className="mt-5 ml-12 "></Image>
+    <button  onClick={handleShowFilter} className="xl:hidden">
+      <Image src={"/filter.png"} width={32} height={32} alt={"filter"} className="mt-5 ml-12 mx-auto"></Image>
     
     </button>
     {/* Conditionally render the FilterOverlay */}
     {showFilter && (
         <div
-          className={`fixed inset-0 z-50 flex justify-center items-end bg-black bg-opacity-50 transition-all ${
+          className={`  fixed inset-0 z-50 flex justify-center items-end bg-black bg-opacity-50 transition-all ${
             showFilter ? "translate-y-0" : "translate-y-full"
           }`}
         >
@@ -75,26 +75,26 @@ export default function CategoryPage(){
 </div>
 <ScrollAnimation>
 
- <div className="grid grid-cols-2 space-x-4 pl-2  lg:grid lg:grid-cols-3 lg:ml-[380px]  lg:pl-2">
+ <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  space-x-4 pl-2  xl:grid xl:grid-cols-3 xl:ml-[380px]  justify-items-center items-center">
         <div className="">
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 lg:hidden"></Image>
+        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 xl:hidden"></Image>
         </Link>
 
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/CC1.png"} width={294} height={441} alt={"menu"} className="ml-5 mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/CC1.png"} width={294} height={441} alt={"menu"} className="ml-5 mt-4 rounded-[12px] hidden xl:block"></Image>
         </Link>
 
-            <p className="lg:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
+            <p className="xl:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
             Gradient Graphic T...
               </p>
-        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="ml-2 lg:ml-6 ml-6 "></Image>
+        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="ml-2 xl:ml-6 ml-6 "></Image>
 
         <div className="flex font-satoshi font-bold text-xl  mt-1 ">
         
-        <p className="  ml-5 lg:ml-7 ">$145</p>
+        <p className="  ml-5 xl:ml-7 ">$145</p>
           
           <p className="  ml-2 text-gray-400 line-through">$242</p>
         <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center">-20%</p>
@@ -106,10 +106,10 @@ export default function CategoryPage(){
         <div>
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/C2.png"} width={172} height={174} alt={"menu"} className="rounded-[10px] mt-5 lg:hidden"></Image>
-        <Image src={"/CC2.png"} width={296} height={444} alt={"menu"} className="rounded-[10px] mt-5 hidden lg:block"></Image>
+        <Image src={"/C2.png"} width={172} height={174} alt={"menu"} className="rounded-[10px] mt-5 xl:hidden"></Image>
+        <Image src={"/CC2.png"} width={296} height={444} alt={"menu"} className="rounded-[10px] mt-5 hidden xl:block"></Image>
         </Link>
-        <p className="lg:text-[20px]  text-[16px]  font-bold font-satoshi">
+        <p className="xl:text-[20px]  text-[16px]  font-bold font-satoshi">
         Polo with Tipping De..
               </p>
         <Image src={"/D45.png"} width={127} height={16} alt={"menu"} className=" "></Image>
@@ -128,16 +128,16 @@ export default function CategoryPage(){
         <div>
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/C3.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden rounded-[12px]"></Image>
-        <Image src={"/CC3.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/C3.png"} width={172} height={174} alt={"menu"} className=" mt-4 xl:hidden rounded-[12px]"></Image>
+        <Image src={"/CC3.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden xl:block"></Image>
 </Link>
         
-        <p className="lg:text-[20px] lg:ml-5  text-[16px] font-bold font-satoshi">
+        <p className="xl:text-[20px] xl:ml-5  text-[16px] font-bold font-satoshi">
         Black Striped T-shirt
               </p>
-        <Image src={"/D4.png"} width={117} height={16} alt={"menu"} className=" lg:ml-5"></Image>
+        <Image src={"/D4.png"} width={117} height={16} alt={"menu"} className=" xl:ml-5"></Image>
 
-        <div className="flex font-satoshi lg:ml-5 font-bold text-xl  mt-1 ">
+        <div className="flex font-satoshi xl:ml-5 font-bold text-xl  mt-1 ">
         
         <p className="   ">$120</p>
           
@@ -152,18 +152,18 @@ export default function CategoryPage(){
 
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/C4.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden"></Image>
-        <Image src={"/CC4.png"} width={268} height={402} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/C4.png"} width={172} height={174} alt={"menu"} className=" mt-4 xl:hidden"></Image>
+        <Image src={"/CC4.png"} width={268} height={402} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden xl:block"></Image>
         
         </Link>
-        <p className="lg:text-[20px] lg:ml-5 text-[16px] font-bold font-satoshi">
+        <p className="xl:text-[20px] xl:ml-5 text-[16px] font-bold font-satoshi">
         Skinny Fit Jeans
               </p>
 
 
-        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 "></Image>
+        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="xl:ml-5 "></Image>
 
-        <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-5">
+        <div className="flex font-satoshi font-bold text-xl  mt-1 xl:ml-5">
         
         <p className="   ">$240</p>
           
@@ -178,19 +178,19 @@ export default function CategoryPage(){
 
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/C5.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden"></Image>
-        <Image src={"/CC5.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/C5.png"} width={172} height={174} alt={"menu"} className=" mt-4 xl:hidden"></Image>
+        <Image src={"/CC5.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden xl:block"></Image>
 </Link>
 
         
-        <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi lg:ml-5">
+        <p className="xl:text-[20px]  text-[16px] font-bold font-satoshi xl:ml-5">
         Checkered Shirt
         
         
               </p>
-        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 "></Image>
+        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="xl:ml-5 "></Image>
 
-        <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-5">
+        <div className="flex font-satoshi font-bold text-xl  mt-1 xl:ml-5">
         
         <p className="   ">$180</p>
           
@@ -199,21 +199,21 @@ export default function CategoryPage(){
         </div>
         </div>
         
-        <div>
+        <div className="">
 
         <Link href={"/Product_Detail"}>
 
-        <Image src={"/C6.png"} width={172} height={174} alt={"menu"} className=" mt-4  lg:hidden"></Image>
-        <Image src={"/CC6.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/C6.png"} width={172} height={174} alt={"menu"} className=" mt-4 ml-20 xl:hidden"></Image>
+        <Image src={"/CC6.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden xl:block"></Image>
 </Link>
 
         
-        <p className="lg:text-[20px]  text-[16px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-5">
+        <p className="xl:text-[20px]  text-[16px] w-[259px] h-[22px] font-bold font-satoshi ml-20 xl:ml-5">
         Sleeve Striped T-shirt
               </p>
-        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 lg:mt-2 "></Image>
+        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="xl:ml-5 xl:mt-2 ml-20"></Image>
 
-        <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-5 ">
+        <div className="flex font-satoshi font-bold text-xl  mt-1 xl:ml-5 ml-20">
         
         <p className="   ">$130</p>
           
@@ -226,79 +226,79 @@ export default function CategoryPage(){
         
 
         <div>
-        {/* <Image src={"/CC7.png"} width={172} height={174} alt={"menu"} className=" mt-4  lg:hidden"></Image> */}
+        {/* <Image src={"/CC7.png"} width={172} height={174} alt={"menu"} className=" mt-4  xl:hidden"></Image> */}
         <Link href={"/Product_Detail"}>
         
-        <Image src={"/CC7.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/CC7.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden xl:block"></Image>
 </Link>
 
         
-        <p className=" lg:text-[20px] text-[16px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-5 hidden lg:block">
+        <p className=" xl:text-[20px] text-[16px] w-[259px] h-[22px] font-bold font-satoshi xl:ml-5 hidden xl:block">
         Sleeve Striped T-shirt
               </p>
-        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="lg:ml-5 lg:mt-2 hidden lg:block"></Image>
+        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="xl:ml-5 xl:mt-2 hidden xl:block"></Image>
 
-        <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-5 hidden lg:block">
+        <div className="flex font-satoshi font-bold text-xl  mt-1 xl:ml-5 hidden xl:block">
         
         <p className="   ">$130</p>
           
-          <p className="lg:ml-14 lg:-mt-7  ml-2 text-gray-400 line-through">$160</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center lg:ml-28 lg:-mt-6">-30%</p>
+          <p className="xl:ml-14 xl:-mt-7  ml-2 text-gray-400 line-through">$160</p>
+        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center xl:ml-28 xl:-mt-6">-30%</p>
        
 
         </div>
         </div>
         
+
+
+        <div className="">
+        {/* <Image src={"/CC8.png"} width={172} height={174} alt={"menu"} className=" mt-4  xl:hidden"></Image> */}
+       
+        <Link href={"/Product_Detail"}>
+       
+        <Image src={"/CC8.png"} width={294} height={441} alt={"menu"} className=" mt-4 rounded-[12px] hidden xl:block"></Image>
+</Link>
+        
+        <p className="xl:text-[20px]  text-[16px] w-[259px] h-[22px] font-bold font-satoshi xl:ml-1 hidden xl:block">
+        Sleeve Striped T-shirt
+              </p>
+        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className=" xl:ml-1 xl:mt-2 hidden xl:block"></Image>
+
+        <div className="flex font-satoshi font-bold text-xl  mt-1 xl:ml-2 hidden xl:block">
+        
+        <p className="   ">$130</p>
+          
+          <p className="xl:ml-14 xl:-mt-7  ml-2 text-gray-400 line-through">$160</p>
+        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center xl:ml-28 xl:-mt-6">-30%</p>
+       
+
+        </div>
+        </div>
+        
+
 
 
         <div>
-        {/* <Image src={"/CC8.png"} width={172} height={174} alt={"menu"} className=" mt-4  lg:hidden"></Image> */}
+        {/* <Image src={"/CC9.png"} width={172} height={174} alt={"menu"} className=" mt-4 xl:hidden"></Image> */}
        
         <Link href={"/Product_Detail"}>
        
-        <Image src={"/CC8.png"} width={294} height={441} alt={"menu"} className=" mt-4 rounded-[12px] hidden lg:block"></Image>
+        <Image src={"/CC9.png"} width={296} height={444} alt={"menu"} className=" mt-4 rounded-[12px] hidden xl:block"></Image>
 </Link>
         
-        <p className="lg:text-[20px]  text-[16px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-1 hidden lg:block">
+        <p className="  text-[16px] xl:text-[20px] w-[259px] h-[22px] font-bold font-satoshi xl:ml-2 hidden xl:block">
         Sleeve Striped T-shirt
               </p>
-        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className=" lg:ml-1 lg:mt-2 hidden lg:block"></Image>
+        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="xl:ml-2 xl:mt-2 hidden xl:block"></Image>
 
-        <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-2 hidden lg:block">
+
+
+        <div className="flex font-satoshi font-bold text-xl  mt-1 xl:ml-2 hidden xl:block">
         
         <p className="   ">$130</p>
           
-          <p className="lg:ml-14 lg:-mt-7  ml-2 text-gray-400 line-through">$160</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center lg:ml-28 lg:-mt-6">-30%</p>
-       
-
-        </div>
-        </div>
-        
-
-
-
-        <div>
-        {/* <Image src={"/CC9.png"} width={172} height={174} alt={"menu"} className=" mt-4 lg:hidden"></Image> */}
-       
-        <Link href={"/Product_Detail"}>
-       
-        <Image src={"/CC9.png"} width={296} height={444} alt={"menu"} className=" mt-4 rounded-[12px] hidden lg:block"></Image>
-</Link>
-        
-        <p className="  text-[16px] lg:text-[20px] w-[259px] h-[22px] font-bold font-satoshi lg:ml-2 hidden lg:block">
-        Sleeve Striped T-shirt
-              </p>
-        <Image src={"/D45.png"} width={106} height={16} alt={"menu"} className="lg:ml-2 lg:mt-2 hidden lg:block"></Image>
-
-
-
-        <div className="flex font-satoshi font-bold text-xl  mt-1 lg:ml-2 hidden lg:block">
-        
-        <p className="   ">$130</p>
-          
-          <p className="lg:ml-14 lg:-mt-7  ml-2 text-gray-400 line-through">$160</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center lg:ml-28 lg:-mt-6">-30%</p>
+          <p className="xl:ml-14 xl:-mt-7  ml-2 text-gray-400 line-through">$160</p>
+        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center xl:ml-28 xl:-mt-6">-30%</p>
        
 
         </div>
@@ -308,31 +308,31 @@ export default function CategoryPage(){
               
             </div>
 
-            <div className="lg:flex lg:justify-center lg:items-center">
-          <div className="mt-6 w-[358px] lg:w-[925px] lg:ml-[430px] text-center border-[1px] flex flex-col justify-center items-center mx-auto">
+            <div className="xl:flex xl:justify-center xl:items-center">
+          <div className="mt-6 max-w-[1441px] xl:w-[925px] xl:ml-[430px] text-center border-[1px] flex flex-col justify-center items-center w-full">
   <hr />
   </div>
   </div>
 
 <div className="">
 
-<div className="flex   items-center mt-4 ml-2 lg:flex lg:justify-center lg:items-center ">
-<button className="lg:mr-[140px] lg:ml-[340px] flex items-center justify-around  lg:flex lg:items-center lg:justify-around text-white border-[1px] rounded-[8px] w-[90px] h-[36px] lg:w-[110px]">
-<Image src={"/arrow-left.png"} width={9} height={9} alt={"menu"} className=" lg:w-[20px] lg:h-[20px] " ></Image>
-<p className="text-[12px] lg:text-[12px] font-satoshi font-medium text-black ">Previous</p>
+<div className="flex sm:flex sm:justify-center   items-center mt-4 ml-2 xl:flex xl:justify-center xl:items-center ">
+<button className="   xl:mr-[140px] xl:ml-[340px] flex items-center justify-around  xl:flex xl:items-center xl:justify-around text-white border-[1px] rounded-[8px] w-[90px] h-[36px] xl:w-[110px]">
+<Image src={"/arrow-left.png"} width={9} height={9} alt={"menu"} className=" xl:w-[20px] xl:h-[20px] " ></Image>
+<p className="text-[12px] xl:text-[12px] font-satoshi  font-medium text-black ">Previous</p>
 </button>
 
-<div className="w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[8px] ml-2 flex justify-center items-center bg-gray-200 ">
+<div className="w-[36px] h-[36px] xl:w-[40px] xl:h-[40px] rounded-[8px] ml-2 flex justify-center items-center bg-gray-200 ">
 <button>1</button>
 
 </div>
 
-<div className="w-[36px] h-[36px] lg:w-[40px] lg:h-[40px] rounded-[8px] ml-2 flex justify-center items-center bg-gray-200 ">
+<div className="w-[36px] h-[36px] xl:w-[40px] xl:h-[40px] rounded-[8px] ml-2 flex justify-center items-center bg-gray-200 ">
 <button>2</button>
 
 </div>
 
-<div className="hidden lg:block w-[36px] h-[36px] lg:w-[40px] text-center  lg:h-[40px] rounded-[8px] ml-2 lg:flex lg:justify-center lg:items-center bg-gray-200 ">
+<div className="hidden xl:block w-[36px] h-[36px] xl:w-[40px] text-center  xl:h-[40px] rounded-[8px] ml-2 xl:flex xl:justify-center xl:items-center bg-gray-200 ">
 <button>3</button>
 
 </div>
@@ -352,8 +352,8 @@ export default function CategoryPage(){
 
 </div>
 
-<div className="flex lg:ml-[250px]  items-center  ml-2 lg:flex lg:flex-row lg:items-end">
-<button className=" flex items-center justify-around text-white border-[1px] rounded-[8px] w-[73px] lg:w-[86px] h-[36px] ">
+<div className=" flex xl:ml-[250px]   items-center  ml-2 xl:flex xl:flex-row xl:items-end">
+<button className=" flex items-center justify-around text-white border-[1px] rounded-[8px] w-[73px] xl:w-[86px] h-[36px] ">
 <p className="text-[12px] font-satoshi font-medium text-black">Next</p>
 <Image src={"/arrow-right.png"} width={9} height={9} alt={"menu"} className=" "></Image>
 
@@ -365,7 +365,7 @@ export default function CategoryPage(){
 </div>
 
 
-<div className="lg:w-[295px] lg:h-[1220px] border-[1px] rounded-[20px] ml-20 -mt-[1300px] hidden lg:block ">
+<div className="xl:w-[295px] xl:h-[1220px] border-[1px] rounded-[20px] ml-20 -mt-[1300px] hidden xl:block ">
     <div>
 <div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
 <p>Filters</p>

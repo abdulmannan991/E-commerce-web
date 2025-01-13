@@ -8,25 +8,25 @@ export default function StayPage(){
         <div className="">
             {/* Stay upto date */}
             <ScrollAnimation>
-            <div className="w-[392px] h-[846px] lg:w-[1441px] lg:h-[499px] bg-lightGray lg:mt-[200px] mt-[150px]  ">
+ <div className=" w-full xl:h-[646px] h-[846px]   mx-auto bg-lightGray xl:mt-[200px] mt-[250px]   ">
 
 <div className="flex justify-center items-center ">
-<div className="w-[358px] h-[293px] lg:w-[1240px] lg:h-[180px]   flex justify-center rounded-[20px] -ml-1 -mt-[100px] bg-black">
-            <div className=" font-integral font-bold text-white text-[32px] mt-6 lg:flex lg:justify-start lg:items-start gap-2">
+<div className="w-[358px] md:w-[458px] h-[293px] xl:w-[1240px] xl:h-[180px] lg:w-full  flex justify-center rounded-[20px] -ml-1 -mt-[100px] bg-black">
+            <div className=" font-integral  font-bold text-white text-[32px] mt-6 xl:flex xl:justify-start xl:items-start gap-2">
             
-            <p className="hidden lg:block w-[451px] h-[94px]">STAY UPTO DATE ABOUT OUR LATEST OFFER</p>
-            <p className="lg:hidden ">
+            <p className="hidden xl:block w-[451px] h-[94px]">STAY UPTO DATE ABOUT OUR LATEST OFFER</p>
+            <p className="xl:hidden ">
             STAY UPTO DATE 
             </p>
-            <span className="-mt-2 block lg:hidden">
+            <span className="-mt-2 block xl:hidden">
               About Our
             </span>
 {/*             
-            <span className="  hidden lg:block">
+            <span className="  hidden xl:block">
               About 
             </span> */}
             
-            <span className="-mt-2 block lg:hidden ">
+            <span className="-mt-2 block xl:hidden ">
               Latest Offers
             </span>
             

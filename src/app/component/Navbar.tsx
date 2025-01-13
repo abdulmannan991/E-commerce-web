@@ -15,7 +15,7 @@ export default function Navbar(){
         
     return (
 <div>
-    <div className="font-sans text-xs leading-4 bg-black h-[34px] w-full pt-[9px] pb-[9px] mx-auto lg:hidden">
+    <div className="font-sans text-xs leading-4 bg-black h-[34px] w-full pt-[9px] pb-[9px] mx-auto xl:hidden">
         <p className="text-white text-center">Sign up and get 20% off to your first order. Sign Up Now</p>
     </div>
 {/* Mobile Nav */}
@@ -36,14 +36,14 @@ export default function Navbar(){
 
 {isOpen &&
 
-<div className="font-sans flex-col justify-between items-center text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden lg:block ">
+<div className="font-sans flex-col justify-between items-center text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden xl:block ">
   <p className="text-white text-center text-sm">Sign up and get 20% off your first order. Sign Up Now</p>
   <p  onClick={handleClose} className= "cursor-pointer text-white text-center text-sm ml-[850px] -mt-5">X</p>
 
 
 </div>
 }
-<div className="items-center lg:block hidden">
+<div className="items-center xl:block hidden">
     <div className="flex">
         <p className="font-integral font-bold text-[32px] w-[160px] h-[22px] leading-6 mt-4  ml-12">SHOP.CO</p>
         <p className="font-satoshi text-[16px]  mt-4 cursor-pointer ml-12">shop</p>

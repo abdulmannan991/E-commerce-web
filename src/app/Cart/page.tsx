@@ -49,7 +49,7 @@ export default function CartPage(){
 
     
 
-<div className="mt-10 ml-4 mr-4 h-[31px] w-[105px] lg:h-[52px] lg:w-[170px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
+<div className="mt-10 ml-11 lg:-mr-0  h-[31px] w-[105px] lg:h-[52px] lg:w-[170px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
 <button className=" text-customBlack  text-[24px]">-</button>
 <p>1</p>
 <button className=" text-customBlack text-[24px]">+</button>
@@ -88,7 +88,7 @@ export default function CartPage(){
 
     
 
-<div className="mt-8 ml-11 h-[31px] w-[105px] lg:h-[52px] lg:w-[170px]  rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
+<div className="mt-8 ml-11 h-[31px]  w-[105px] lg:h-[52px] lg:w-[170px]  rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
 <button className=" text-customBlack  text-[24px]">-</button>
 <p>1</p>
 <button className=" text-customBlack text-[24px]">+</button>
