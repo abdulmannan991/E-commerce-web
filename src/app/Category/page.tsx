@@ -2,14 +2,45 @@
 import Image from "next/image"
 import StayPage from "../component/Stay"
 import Footer from "../component/Footer"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FilterOverlay from "../component/Filter";
 import Link from "next/link";
 import ScrollAnimation from "../component/Scroll_animation";
+import { client } from "@/sanity/lib/client";
+import { product } from "@/sanity/schemaTypes/product";
+import { urlFor } from "@/sanity/lib/image";
 
 export default function CategoryPage(){
 
   const [showFilter, setShowFilter] = useState(false); // State to manage overlay visibility
+
+
+type Product = {
+  image(image: any): unknown;
+  discountPercent: number;
+  _id : string;
+  name : string; 
+  price : number;
+  image_url : string;
+};
+
+
+const [CategoryProducts,setCategoryProducts] = useState<Product[]>([]);
+
+useEffect(() => {
+  const fetchCategoryProducts = async () => {
+    const products = await client.fetch(`*[_type == "products"][1..2]  // First 3 products
+      + *[_type == "products"][4..9] + *[_type == "products"][11..11]  // Products 5 to 8`);
+
+      setCategoryProducts(products);
+  };
+
+  fetchCategoryProducts();
+}, []);
+
+
+
+
 
   // Function to show the filter overlay
   const handleShowFilter = () => {
@@ -74,35 +105,57 @@ export default function CategoryPage(){
 </div>
 </div>
 <ScrollAnimation>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2 xl:grid-cols-3 xl:ml-[380px] justify-items-center items-center">
+  {CategoryProducts.map((product: Product) => (
+    <div key={product._id}  className="flex flex-col justify-center items-center">
+      <Link href={`/Product_Detail`}>
+        <Image
+          src={urlFor(product.image).url()}
+          width={172}
+          height={174}
+          alt={"menu"}
+          className="ml-4 mt-4 xl:hidden object-cover"
+        />
+      </Link>
 
- <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  space-x-4 pl-2  xl:grid xl:grid-cols-3 xl:ml-[380px]  justify-items-center items-center">
-        <div className="">
-        <Link href={"/Product_Detail"}>
+      <Link href={`/Product_Detail`}>
 
-        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className="ml-4 mt-4 xl:hidden"></Image>
-        </Link>
+      
 
-        <Link href={"/Product_Detail"}>
+        <Image
+          src={urlFor(product.image).url()}
+          width={294}
+          height={441}
+          alt={"menu"}
+          className="ml-5 mt-4 rounded-[12px] hidden xl:block object-cover"
+        />
+      </Link>
 
-        <Image src={"/CC1.png"} width={294} height={441} alt={"menu"} className="ml-5 mt-4 rounded-[12px] hidden xl:block"></Image>
-        </Link>
+      <p className="xl:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
+        {product.name}
+      </p>
 
-            <p className="xl:text-[20px] ml-6 text-[16px] font-bold font-satoshi">
-            Gradient Graphic T...
-              </p>
-        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="ml-2 xl:ml-6 ml-6 "></Image>
+      <Image
+        src={"/d35.png"}
+        width={106}
+        height={16}
+        alt={"menu"}
+        className="ml-2 xl:ml-6 ml-6"
+      />
 
-        <div className="flex font-satoshi font-bold text-xl  mt-1 ">
-        
-        <p className="  ml-5 xl:ml-7 ">$145</p>
-          
-          <p className="  ml-2 text-gray-400 line-through">$242</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center">-20%</p>
-       
+      <div className="flex font-satoshi font-bold text-xl mt-1">
+        <p className="ml-5 xl:ml-7">{`${product.price}rs`}</p>
 
-        </div>
-        </div>
+        {product.discountPercent > 0 && (
+          <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs text-rose-400 text-center">
+            -{`${product.discountPercent}%`}
+          </p>
+        )}
+      </div>
+    </div>
+  ))}
 
+{/*         
         <div>
         <Link href={"/Product_Detail"}>
 
@@ -223,10 +276,9 @@ export default function CategoryPage(){
 
         </div>
         </div>
-        
+         */}
 
-        <div>
-        {/* <Image src={"/CC7.png"} width={172} height={174} alt={"menu"} className=" mt-4  xl:hidden"></Image> */}
+        {/* <div>
         <Link href={"/Product_Detail"}>
         
         <Image src={"/CC7.png"} width={296} height={444} alt={"menu"} className="ml-4 mt-4 rounded-[12px] hidden xl:block"></Image>
@@ -252,7 +304,6 @@ export default function CategoryPage(){
 
 
         <div className="">
-        {/* <Image src={"/CC8.png"} width={172} height={174} alt={"menu"} className=" mt-4  xl:hidden"></Image> */}
        
         <Link href={"/Product_Detail"}>
        
@@ -279,7 +330,6 @@ export default function CategoryPage(){
 
 
         <div>
-        {/* <Image src={"/CC9.png"} width={172} height={174} alt={"menu"} className=" mt-4 xl:hidden"></Image> */}
        
         <Link href={"/Product_Detail"}>
        
@@ -305,7 +355,7 @@ export default function CategoryPage(){
         </div>
         
         
-              
+               */}
             </div>
 
             <div className="xl:flex xl:justify-center xl:items-center">
@@ -365,7 +415,7 @@ export default function CategoryPage(){
 </div>
 
 
-<div className="xl:w-[295px] xl:h-[1220px] border-[1px] rounded-[20px] ml-20 -mt-[1300px] hidden xl:block ">
+<div className="xl:w-[295px] xl:h-[1220px] border-[1px] rounded-[20px] ml-20 -mt-[1380px] hidden xl:block ">
     <div>
 <div className="font-satoshi text-[20px] font-bold p-4 flex justify-between">
 <p>Filters</p>

@@ -5,26 +5,31 @@ import Footer from "../component/Footer"
 import Link from "next/link"
 import { useState } from "react"
 import ScrollAnimation from "../component/Scroll_animation"
-export default function ProductDetail(){
-
-const [Counter,setincrease] =  useState(0)
-
-
-  const handleIncrease = ()=>{
-    if(Counter<100){
-     setincrease(Counter +  1)
-    }
-  }
-
-
-  const handleDecreases = ()=>{
-    if(Counter>0){
-     setincrease(Counter -  1)
-    }
-  }
+import { client } from "@/sanity/lib/client"
+import { groq } from "next-sanity"
+import { Product } from "../../../types/product"
 
    
+
+  export default async function ProductDetail(){
+    const [Counter,setincrease] =  useState(0)
     
+    
+    
+    
+      const handleIncrease = ()=>{
+        if(Counter<100){
+         setincrease(Counter +  1)
+        }
+      }
+    
+    
+      const handleDecreases = ()=>{
+        if(Counter>0){
+         setincrease(Counter -  1)
+        }
+      }
+        
 
 
     return(
@@ -61,16 +66,16 @@ const [Counter,setincrease] =  useState(0)
 </div>
 
 
-<div className="flex justify-center items-center mt-4 gap-4 lg:flex lg:flex-col lg:ml-28 lg:items-start lg:-mt-[530px]">
-    <Image src={"/image2.png"} height={106} width={111} alt="product"  className="lg:w-[152px] h-[167px]"></Image>
-    <Image src={"/Dimage3.png"} height={106} width={111} alt="product" className="lg:w-[152px] h-[168px]" ></Image>
-    <Image src={"/Dimage2.png"} height={106} width={112} alt="product" className="lg:w-[152px] h-[167px]"></Image>
+<div className="flex ml-2 justify-center items-center mt-4 gap-4 lg:flex lg:flex-col lg:ml-28 lg:items-start lg:-mt-[530px]">
+    <Image src={"/image2.png"} height={106} width={111} alt="product"  className="smMax:h-[90px] smMax:w-[100px] lg:w-[152px] h-[167px]"></Image>
+    <Image src={"/Dimage3.png"} height={106} width={111} alt="product" className="smMax:h-[90px] smMax:w-[100px] lg:w-[152px] h-[168px]" ></Image>
+    <Image src={"/Dimage2.png"} height={106} width={112} alt="product" className="smMax:h-[90px] smMax:w-[100px] lg:w-[152px] h-[167px]"></Image>
 
 </div>
 
 
 <div className="lg:flex lg:flex-col lg:items-end  lg:mr-2 lg:-mt-[540px] ">
-    <p className="font-integral font-bold text-[24px] mt-2 ml-4 h-[56px] w-[220px] lg:text-[40px] lg:w-[600px] lg:h-[48px] ">
+    <p className="font-integral w-[300px]  font-bold text-[24px] mt-2 ml-4 h-[56px]  lg:text-[40px] lg:w-[600px] lg:h-[48px] ">
     One Life Graphic T-shirt
     </p>
     <Image src={"/Dstar.png"} height={19} width={154} alt="rating" className="mt-4 ml-4 lg:mr-[440px]" ></Image>
@@ -95,7 +100,7 @@ $300
 </div>
 
 <div className="lg:flex lg:flex-col lg:items-end lg:mr-64">
-<p className="h-[50px] w-[368px] ml-4 text-[14px] text-gray-400 mt-4  lg:text-[16px] lg:-mr-[140px] lg:h-[33px] lg:w-[490px]">
+<p className="h-[50px] smMax:w-[310px] w-[368px] ml-4 text-[14px] text-gray-400 mt-4  lg:text-[16px] lg:-mr-[140px] lg:h-[33px] lg:w-[490px]">
     This graphic t-shirt which is perfect for any 
     occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
     </p>
@@ -160,7 +165,7 @@ $300
 </div>
 
 
-<div className="mt-4 ml-4 h-[44px] w-[110px] lg:h-[52px] lg:w-[170px] lg:ml-[780px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
+<div className="smMax:w-[80px] smMax:h-[34px]  mt-4 ml-4 h-[44px] w-[110px] lg:h-[52px] lg:w-[170px] lg:ml-[780px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
 <button onClick={handleDecreases} className=" text-customBlack  text-[24px]">-</button>
 <p> {`${Counter}`} </p>
 <button onClick={handleIncrease} className=" text-customBlack text-[24px]">+</button>
@@ -172,7 +177,7 @@ $300
 
 
 <div className="flex justify-end items-end -mt-11">
-<div className=" h-[44px]  w-[236px] lg:h-[52px] lg:-mt-2  lg:w-[400px] rounded-[62px] bg-black flex justify-center items-center  text-center">
+<div className="smMax:w-[200px] smMax:h-[40px] smMax:mt-2  h-[44px]  w-[236px] lg:h-[52px] lg:-mt-2  lg:w-[400px] rounded-[62px] bg-black flex justify-center items-center  text-center">
 <Link href={"/Cart"}>
 
 <button className=" text-white">Add to Cart</button>
@@ -203,8 +208,8 @@ $300
   <hr />
 </div>
 
-<div className="lg:flex lg:justify-center lg:items-center">
-<div className=" h-[1px] border-black lg:mr-14 lg:w-[300px] w-[140px] text-black bg-black  -mt-[2px] border-[1px]  ml-[144px]">
+<div className="lg:flex lg:justify-center lg:items-center ">
+<div className=" h-[1px] border-black smMax:ml-36 lg:mr-14 lg:w-[300px] w-[140px] text-black bg-black  -mt-[2px] border-[1px]  ml-[144px]">
 </div>
 </div>
 
@@ -216,7 +221,7 @@ $300
 
 <ScrollAnimation>
 <div className="flex gap-2">
-<p className="font-satoshi font-bold text-[20px] mt-4 ml-4 lg:mt-2">
+<p className="smMax:text-[14px] font-satoshi font-bold text-[20px] mt-4 ml-4 lg:mt-2">
         All Reviews 
     </p>
 
@@ -225,7 +230,7 @@ $300
     </p>
 
     <div className="ml-6 lg:ml-[740px] lg:-mt-2">
-<Image src={"/filter.png"} height={40} width={40} alt="rating" className="mt-4 ml-4" ></Image>
+<Image src={"/filter.png"} height={40} width={40} alt="rating" className="smMax:-ml-1 mt-4 ml-4" ></Image>
         
 
     </div>

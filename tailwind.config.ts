@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        smMax: { max: '390px' }, // Targets screens less than 390px
+        smMax: { max: '390px' },
+        xs: '491px', // Targets screens less than 390px
       },
       fontFamily: {
         sans: ['Satoshi', 'Integral CF', 'sans-serif'], 

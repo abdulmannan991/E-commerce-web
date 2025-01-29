@@ -1,9 +1,38 @@
+'use client'
 import Image from "next/image"
 import Link from "next/link"
 import ScrollAnimation from "./Scroll_animation"
+import { useEffect, useState } from "react";
+import { client } from "@/sanity/lib/client";
+import { product } from "@/sanity/schemaTypes/product";
+import { urlFor } from "@/sanity/lib/image";
 
 export default function TopSelling(){
-return(
+
+type Product = {
+  _id : string;
+  name : string; 
+  price : number;
+  image_url : string;
+};
+
+
+const [TopSellingProducts,setTopSellingProducts] = useState<Product[]>([]);
+
+useEffect(() => {
+  const fetchNewArrivalProducts = async () => {
+    const products = await client.fetch(`*[_type == "products"][4..7]
+      
+      `);
+    setTopSellingProducts(products);
+  };
+
+  fetchNewArrivalProducts();
+}, []);
+
+
+
+  return(
 
     <div>
         <ScrollAnimation>
@@ -14,147 +43,50 @@ return(
         
 
           <div className=" flex flex-wrap justify-center items-center   space-x-4  ">
-<div className="flex justify-center  flex-wrap items-center">
+{TopSellingProducts.map((product:any)=>(
 
-      
-        
-
- </div>
-
- <div className="">
+  <><div className="flex justify-center  flex-wrap items-center">
 
 
-<Link href={"/Category"}>
 
-<Image src={"/vertical.png"} width={198} height={298} alt={"menu"} className="lg:-ml-4 mt-4 lg:h-[248px] lg:w-[295px] rounded-[12px]  "></Image>
 
-</Link>
+  </div>
+  <div className="">
 
-    <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi lg:-ml-4">
-    Vertical Striped Shirt
+
+      <Link href={"/Category"}>
+
+        <Image src={urlFor(product.image).url()} width={198} height={298} alt={"menu"} className="lg:-ml-4 mt-4 lg:h-[248px] lg:w-[295px] rounded-[12px]  "></Image>
+
+      </Link>
+
+      <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi lg:-ml-4">
+       {product.name}
       </p>
-<Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="lg:-ml-4  "></Image>
+      <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="lg:-ml-4  "></Image>
 
-<div className="flex font-satoshi font-bold text-xl  mt-1 lg:-ml-4">
+      <div className="flex font-satoshi font-bold text-xl  mt-1 lg:-ml-4">
 
-<p className="    ">$212</p>
-<p className=" ml-2  text-gray-400 line-through">$235</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red mt-1 ml-2 text-xs  text-rose-400 text-center">-20%</p>
-        
- 
+        <p className="    ">{`${product.price}rs`}</p>
 
-</div>
-</div>
-
-        
-        <div className="">
-
-      
-
-<Link href={"/Category"}>
-
-        <Image src={"/dcourage.png"} width={198} height={298} alt={"menu"} className="lg:h-[248px] lg:w-[295px] mt-4 rounded-[12px]  "></Image>
-
-        </Link>
-
-            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi">
-            Courage Graphic T-short
-              </p>
-        <Image src={"/d35.png"} width={106} height={16} alt={"menu"} className="  "></Image>
-
-        <div className="flex font-satoshi font-bold text-xl  mt-1 ">
-        
-        <p className="    ">$145</p>
-          
-       
-
-        </div>
-        </div>
-
-        
-        <div className="">
+ {product.discountPercent > 0 && (
+    <p className="h-[20px] w-[40px] sm:h-[28px] sm:w-[44px] rounded-2xl bg-red mt-1 ml-2 text-xs text-rose-400 text-center">
+      {`${product.discountPercent}%`}
+    </p>
+  )}
 
 
-<Link href={"/Category"}>
-
-        <Image src={"/dlo.png"} width={198} height={298} alt={"menu"} className="lg:h-[248px] lg:w-[295px] ml-4   mt-4"></Image>
-        </Link>
+      </div>
+    </div></>
 
 
-            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-0">
-            LOOSE FIT BERMUDA SHORTS
-
-              </p>
-        <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className=" smMax:-ml-0 "></Image>
-
-        <div className="flex font-satoshi font-bold text-xl  mt-1 ">
-        
-        <p className="  -ml-0">$80</p>
-          
-       
-
-        </div>
-        </div>
-
-
-        
-        <div className="">
-        <Image src={"/C1.png"} width={172} height={174} alt={"menu"} className=" hidden"></Image>
-<Link href={"/Category"}>
-
-        <Image src={"/dfad.png"} width={198} height={298} alt={"menu"} className="lg:h-[248px] lg:w-[295px] -ml-0  mt-4"></Image>
-
-</Link>
-            <p className="lg:text-[20px]  text-[16px] font-bold font-satoshi -ml-0">
-            FADED SKINNY JEANS
-
-              </p>
-        <Image src={"/Tstar.png"} width={106} height={16} alt={"menu"} className="-ml-0  "></Image>
-
-        <div className="flex font-satoshi font-bold text-xl  mt-1 ">
-         
-        <p className="  -ml-0">$210</p>
-          
-          
-
-        </div>
-        </div>
-        
+))}
 
         
         
         </div>
 
  
-
-{/*         
-            <div className="flex space-x-4 p-4 lg:gap-12 lg:flex hidden lg:block">
-            <Image src={"/dv.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
-        <Image src={"/dcourage.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
-        <Image src={"/dlo.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
-        <Image src={"/dfad.png"} width={295} height={298} alt={"menu"} className=" mt-4"></Image>
-              
-            </div>
-            <div className="flex gap-x-16 lg:gap-52">
-            <p className="ml-4  text-sm font-satoshi font-bold ">
-              Vertical Striped Shirt
-              </p>
-        
-              
-              <p className=" text-sm font-satoshi font-bold ">
-              Courage Graphic T-short
-              </p>
-        
-              <p className="ml-4 text-sm font-satoshi font-bold hidden lg:block">
-              Vertical Striped Shirt
-              </p>
-        
-              
-              <p className=" text-sm font-satoshi font-bold hidden lg:block">
-              Courage Graphic T-short
-              </p>
-            
-            </div> */}
 
             {/* Lg : hidden sm visible */}
             <div className="flex lg:gap-48 lg:hidden">
