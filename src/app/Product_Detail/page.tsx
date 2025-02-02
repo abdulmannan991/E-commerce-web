@@ -5,33 +5,29 @@ import Footer from "../component/Footer"
 import Link from "next/link"
 import { useState } from "react"
 import ScrollAnimation from "../component/Scroll_animation"
-import { client } from "@/sanity/lib/client"
-import { groq } from "next-sanity"
-import { Product } from "../../../types/product"
 
-   
+       
 
-  export default async function ProductDetail(){
+  export default  function ProductDetail(){
+    
+
     const [Counter,setincrease] =  useState(0)
     
     
     
     
-      const handleIncrease = ()=>{
-        if(Counter<100){
-         setincrease(Counter +  1)
-        }
+    const handleIncrease = ()=>{
+      if(Counter<100){
+       setincrease(Counter +  1)
       }
-    
-    
-      const handleDecreases = ()=>{
-        if(Counter>0){
-         setincrease(Counter -  1)
-        }
+    }
+  
+  
+    const handleDecreases = ()=>{
+      if(Counter>0){
+       setincrease(Counter -  1)
       }
-        
-
-
+    }
     return(
 
         <div className="">

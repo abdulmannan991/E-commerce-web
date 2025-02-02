@@ -6,7 +6,7 @@ export interface Product {
     size: string;
     color: string;
     price: number;
-    discountPrice: number;
+    discountPercent: number;
   }
   
   

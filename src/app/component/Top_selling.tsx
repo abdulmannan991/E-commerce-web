@@ -4,7 +4,7 @@ import Link from "next/link"
 import ScrollAnimation from "./Scroll_animation"
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
-import { product } from "@/sanity/schemaTypes/product";
+// import { product } from "@/sanity/schemaTypes/product";
 import { urlFor } from "@/sanity/lib/image";
 
 export default function TopSelling(){

@@ -4,7 +4,7 @@ import Link from "next/link"
 import ScrollAnimation from "../component/Scroll_animation";
 import { client } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
-import { product } from "@/sanity/schemaTypes/product";
+// import { product } from "@/sanity/schemaTypes/product";
 import { urlFor } from "@/sanity/lib/image";
 
 export default function NewArrival(){
