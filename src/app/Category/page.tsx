@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Image from "next/image"
 import StayPage from "../component/Stay"
 import Footer from "../component/Footer"
@@ -108,7 +108,7 @@ useEffect(() => {
 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2 xl:grid-cols-3 xl:ml-[380px] justify-items-center items-center">
   {CategoryProducts.map((product: Product) => (
     <div key={product._id}  className="flex flex-col justify-center items-center">
-      <Link href={`/Product_Detail`}>
+      <Link href={`/Product_Detail/${product._id}`}>
         <Image
           src={urlFor(product.image).url()}
           width={172}
@@ -118,7 +118,8 @@ useEffect(() => {
         />
       </Link>
 
-      <Link href={`/Product_Detail`}>
+      <Link href={`/Product_Detail/${product._id}`}>
+
 
       
 

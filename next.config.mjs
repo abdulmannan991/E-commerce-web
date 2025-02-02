@@ -7,15 +7,15 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: '/product_detail/:id',
-        destination: '/Product_Detail/:id',
-        permanent: true, // Set to true for a 301 redirect
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/product_detail/:id',
+  //       destination: '/Product_Detail/:id',
+  //       permanent: true, 
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
