@@ -10,6 +10,8 @@ import { urlFor } from "@/sanity/lib/image";
 export default function TopSelling(){
 
 type Product = {
+  image(image: string): unknown;
+  discountPercent: number;
   _id : string;
   name : string; 
   price : number;
@@ -43,7 +45,7 @@ useEffect(() => {
         
 
           <div className=" flex flex-wrap justify-center items-center   space-x-4  ">
-{TopSellingProducts.map((product:any)=>(
+{TopSellingProducts.map((product)=>(
 
   <><div className="flex justify-center  flex-wrap items-center">
 

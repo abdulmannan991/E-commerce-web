@@ -1,16 +1,16 @@
 import { defineType } from "sanity"
 
-  type Product = {
-    _id: string;
-    name: string;
-    price: number;
-    image: {
-      asset: {
-        url: string;
-      };
-    };
-    discountPercent: number;
-  };
+//   type Product = {
+//     _id: string;
+//     name: string;
+//     price: number;
+//     image: {
+//       asset: {
+//         url: string;
+//       };
+//     };
+//     discountPercent: number;
+//   };
 
 
 export const product = defineType({

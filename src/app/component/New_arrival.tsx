@@ -10,6 +10,8 @@ import { urlFor } from "@/sanity/lib/image";
 export default function NewArrival(){
 
   type Product = {
+    image(image: string): unknown;
+    discountPercent: number;
     _id: string;
     name: string
     price: number;
@@ -43,7 +45,7 @@ export default function NewArrival(){
           
           {/* Desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 pl-2 justify-items-center items-center">
-  {newArrivalProducts.map((product: any) => (
+  {newArrivalProducts.map((product) => (
     <div className="flex justify-center flex-col items-center" key={product._id}>
       <div className="flex flex-col items-center justify-center">
         <Link href={"/Category"}>

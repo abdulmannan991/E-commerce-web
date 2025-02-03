@@ -4,7 +4,6 @@ import { client } from '@/sanity/lib/client'; // Adjust the import based on your
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';// Ensure you have a function to get the image URL
 import { Product } from '../../../../types/product';
-import Link from 'next/link';
 import StayPage from '@/app/component/Stay';
 import Footer from '@/app/component/Footer';
 

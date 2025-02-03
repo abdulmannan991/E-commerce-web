@@ -7,7 +7,6 @@ import FilterOverlay from "../component/Filter";
 import Link from "next/link";
 import ScrollAnimation from "../component/Scroll_animation";
 import { client } from "@/sanity/lib/client";
-import { product } from "@/sanity/schemaTypes/product";
 import { urlFor } from "@/sanity/lib/image";
 
 export default function CategoryPage(){
@@ -16,7 +15,7 @@ export default function CategoryPage(){
 
 
 type Product = {
-  image(image: any): unknown;
+  image(image:string): unknown;
   discountPercent: number;
   _id : string;
   name : string; 
