@@ -23,6 +23,7 @@ type Product = {
   image_url : string;
 };
 
+// check
 
 const [CategoryProducts,setCategoryProducts] = useState<Product[]>([]);
 
