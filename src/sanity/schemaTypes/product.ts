@@ -24,14 +24,7 @@ export const product = defineType({
         type: 'string',
         },
 
-        {
-              name : "slug",
-              type : "slug",
-              title : "Slug",
-              options:{
-                source : "name"
-              }
-        },
+      
         {
             name: 'price',
             title: 'Price',

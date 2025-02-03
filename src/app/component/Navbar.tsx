@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 
@@ -26,7 +27,11 @@ export default function Navbar(){
         <div className="flex justify-end gap-4 mt-4  w-full mr-2 hidden">
   <i className="fas fa-search text-lg"></i>
 
-  <i className="fas fa-shopping-cart text-lg"></i>
+<Link href={"/Cart"} >
+<button>
+<i className="fas fa-shopping-cart text-lg"></i>
+</button>
+</Link>
 
   <i className="fas fa-user-circle text-lg"></i>
 </div>
@@ -69,9 +74,22 @@ export default function Navbar(){
 </div>
 
 <div className="flex justify-end items-end -mt-6   space-x-6">
-<i className="fas fa-shopping-cart text-lg  "></i>
 
+<Link href={"/Cart"} >
+<button>
+<i className="fas fa-shopping-cart text-lg"></i>
+</button>
+</Link>
+
+
+
+<button>
 <i className="fas fa-user-circle text-lg"></i>
+
+</button>
+
+
+
 
 </div>
 </div>
