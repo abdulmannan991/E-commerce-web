@@ -10,7 +10,7 @@ import { useCart } from '../../../../context/CartContext';
 
 const ProductDetail = ({params}:{params:{id:string}}) => {
   const [counter, setCounter] = useState(1); 
-  const [showPopup, setShowPopup] = useState(false);
+  // const [showPopup, setShowPopup] = useState(false);
   const { addToCart } = useCart();
     
     
