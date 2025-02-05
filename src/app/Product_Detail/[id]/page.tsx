@@ -6,25 +6,53 @@ import { urlFor } from '@/sanity/lib/image';// Ensure you have a function to get
 import { Product } from '../../../../types/product';
 import StayPage from '@/app/component/Stay';
 import Footer from '@/app/component/Footer';
+import { useCart } from '../../../../context/CartContext';
 
 const ProductDetail = ({params}:{params:{id:string}}) => {
-    const [Counter,setincrease] =  useState(0)   
+  const [counter, setCounter] = useState(1); 
+  const [showPopup, setShowPopup] = useState(false);
+  const { addToCart } = useCart();
     
     
     
-    const handleIncrease = ()=>{
-      if(Counter<100){
-       setincrease(Counter +  1)
-      }
-    }
-  
-  
-    const handleDecreases = ()=>{
-      if(Counter>0){
-       setincrease(Counter -  1)
-      }
-    }
 
+  
+    // const handleIncrease = ()=>{
+    //   if(Counter<100){
+    //    setincrease(Counter +  1)
+    //   }
+    // }
+  
+  
+    // const handleDecreases = ()=>{
+    //   if(Counter>0){
+    //    setincrease(Counter -  1)
+    //   }
+    // }
+
+    const handleIncrease = () => setCounter(counter + 1);
+    const handleDecrease = () => setCounter(counter > 1 ? counter - 1 : 1);
+  
+    // Function to add to cart
+    const handleAddToCart = () => {
+      if (product) {
+        addToCart(
+          {
+            _id: product._id,   // _id is used
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: counter,   // Make sure to include the quantity here
+          },
+          counter 
+            // Pass the quantity as the second argument
+        );
+        
+      }
+    };
+    
+  
+  
     const id = params.id
     const [product, setProduct] = useState<Product | null>(null); // Use Product type
 
@@ -84,7 +112,7 @@ const ProductDetail = ({params}:{params:{id:string}}) => {
         </div>
         <div className="flex flex-col lg:flex-row items-center lg:items-start -space-x-6  mx-auto max-w-6xl p-6">
   {/* Image Section */}
-  <div className="w-full lg:w-1/2 lg:ml-44 flex justify-center">
+  <div className="w-full lg:w-1/2 lg:ml-20 xl:ml-44  flex justify-center">
     <Image
       src={urlFor(product.image).url()} // Use the correct field for the image
       width={400}
@@ -131,7 +159,8 @@ const ProductDetail = ({params}:{params:{id:string}}) => {
 
 
     {/* Size Selection */}
-   <div className="mt-4">
+    <div className="mt-4">
+  {/* Size Selection */}
   <span className="font-semibold text-gray-700">Choose Size</span>
   <div className="flex gap-2 mt-2">
     {(Array.isArray(product.sizes) ? product.sizes : product.sizes?.split(", ")).map((size, index) => (
@@ -141,30 +170,27 @@ const ProductDetail = ({params}:{params:{id:string}}) => {
     ))}
   </div>
 </div>
-</div>
-</div>
 
+{/* Quantity Selector & Add to Cart Section */}
+<div className="flex flex-col sm:flex-row items-center justify-between mt-6 sm:mt-4">
+  {/* Quantity Selector */}
+  <div className="flex items-center justify-evenly w-[110px] h-[44px] sm:w-[80px] sm:h-[34px] lg:w-[170px] lg:h-[52px] rounded-full bg-lightGray">
+    <button onClick={handleDecrease} className="text-2xl px-3 sm:px-2 lg:px-4">-</button>
+    <p className="text-base sm:text-sm lg:text-lg">{counter}</p>
+    <button onClick={handleIncrease} className="text-2xl px-3 sm:px-2 lg:px-4">+</button>
+  </div>
 
-
-<div className="smMax:w-[80px] smMax:h-[34px] -mt-20  ml-2 h-[44px] w-[110px] lg:h-[52px] lg:w-[170px] lg:ml-[780px] rounded-[62px] bg-lightGray flex justify-center items-center  text-center justify-evenly">
-<button onClick={handleDecreases} className=" text-customBlack  text-[24px]">-</button>
-<p> {`${Counter}`} </p>
-<button onClick={handleIncrease} className=" text-customBlack text-[24px]">+</button>
-
-
-
-
-</div>
-
-
-<div className="flex justify-end items-end -mt-11">
-<div className="smMax:w-[200px] smMax:h-[40px] smMax:mt-2  h-[44px]  w-[236px] lg:h-[52px] lg:-mt-2  lg:w-[400px] rounded-[62px] bg-black flex justify-center items-center  text-center">
-
-<button className=" text-white">Add to Cart</button>
-
-</div>
+  {/* Add to Cart Button */}
+  <button
+    onClick={handleAddToCart}
+    className="mt-4 sm:mt-0 w-full max-w-[200px] sm:max-w-[236px] lg:max-w-[400px] h-[40px] sm:h-[44px] lg:h-[52px] bg-black text-white rounded-full flex justify-center items-center"
+  >
+    Add to Cart
+  </button>
 </div>
 
+</div>
+    </div>
 
 <div className="flex gap-10 mt-10 ml-4 justify-around">
 
