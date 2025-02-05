@@ -19,7 +19,7 @@ export default function Navbar(){
 {/* Mobile Nav */}
     <div className="flex items-center lg:hidden">
         <Image src={"/mobnav.png"} width={24} height={24} alt={"menu"} className="mt-4 ml-2"></Image>
-        <p className="font-integral font-bold text-base leading-6 ml-4 mt-4 text-[25px] ">SHOP.CO</p>
+        <p className="font-integral font-bold text-base leading-6 ml-4 mt-4 text-[25px] ">ManSun E-Commerce</p>
 
         <div className="flex justify-end gap-4 mt-4  w-full mr-2 hidden">
   <i className="fas fa-search text-lg"></i>
@@ -47,7 +47,7 @@ export default function Navbar(){
 }
 <div className="items-center xl:block hidden">
     <div className="flex">
-        <p className="font-integral font-bold text-[32px] w-[160px] h-[22px] leading-6 mt-4  ml-12">SHOP.CO</p>
+        <p className="font-integral font-bold text-[32px] w-[160px] h-[22px] leading-6 mt-4  ml-12">ManSun </p>
         <p className="font-satoshi text-[16px]  mt-4 cursor-pointer ml-12">shop</p>
   <i className="fas fa-chevron-down ml-2 text-gray-500 group-hover:text-gray-700 mt-[20px]"></i>
   <p className="font-satoshi text-[16px] cursor-pointer  mt-4  ml-12">On Sale</p>

@@ -35,6 +35,7 @@ const ProductDetail = ({params}:{params:{id:string}}) => {
   
     // Function to add to cart
     const handleAddToCart = () => {
+      
       if (product) {
         addToCart(
           {
@@ -49,6 +50,8 @@ const ProductDetail = ({params}:{params:{id:string}}) => {
         );
         
       }
+      alert("Item added to Cart!")
+
     };
     
   
