@@ -95,7 +95,7 @@ export default function Home() {
   </div>   
   <div className="flex justify-center items-center xl:hidden overflow-x-clip">
   <div
-    className=" flex flex-col mt-2 smMax:h-[790px]  h-[853px] xl:mt-10  w-full"
+    className=" flex flex-col mt-2 smMax:h-[790px]  h-[853px] xl:mt-10  w-[1028px]"
     style={{ background: "#F2F0F1" }}
   >
     <p className="space-x-2 font-integral font-bold leading-[34px] text-[36px] ml-4 mt-6">
