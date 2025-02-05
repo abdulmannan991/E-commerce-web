@@ -2,6 +2,10 @@
 import { useCart } from "../../../context/CartContext";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
+import Footer from "../component/Footer";
+import StayPage from "../component/Stay";
+import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 export default function Cart() {
   const { cart, removeFromCart, getCartTotal } = useCart();
@@ -18,7 +22,27 @@ export default function Cart() {
     <div className="w-full lg:w-2/3">
       <h1 className="text-2xl font-bold">Shopping Cart</h1>
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <div className="flex flex-col mt-56 justify-center items-center">
+         <motion.p
+  initial={{ opacity: 0, y: -10, scale: 0.9, color: "#9CA3AF" }} // Initial state
+  animate={{
+    opacity: [0.5, 1, 0.5], 
+    y: [0, -5, 0], 
+    scale: [0.95, 1, 0.95],
+    color: ["#9CA3AF", "#6B7280", "#9CA3AF"] // Smooth color transition
+  }}
+  transition={{
+    duration: 2, 
+    repeat: Infinity, 
+    repeatType: "mirror", 
+    ease: "easeInOut"
+  }}
+  className="text-gray-500 text-center text-lg"
+>
+  Your cart is empty.
+</motion.p>
+
+        </div>
       ) : (
         <div className="mt-4 space-y-4">
           {cart.map((item) => (
@@ -43,9 +67,12 @@ export default function Cart() {
               </button>
             </div>
           ))}
+          
         </div>
       )}
+      
     </div>
+    
   
     {/* 📦 Order Summary Section */}
     <div className="w-full lg:w-[358px] p-4 sm:p-6 border-[1px] rounded-[20px] mt-6 lg:mt-0">
@@ -94,15 +121,20 @@ export default function Cart() {
             Apply
           </button>
         </div>
+
   
         {/* Checkout Button (Stays Inside Card) */}
         <button className="bg-black text-white rounded-full px-6 py-3 w-full lg:w-[326px] flex items-center justify-center space-x-2">
           <span>Go to Checkout</span>
           <Image src={"/arrow-down.png"} width={20} height={20} alt="Arrow Icon" className="ml-2" />
         </button>
+        
       </div>
+      
     </div>
+  
   </div>
+  
   
   );
 }

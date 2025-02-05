@@ -7,6 +7,8 @@ import Customer from "./component/Customer";
 import StayPage from "./component/Stay";
 
 export default function Home() {
+
+  
   return (
    <div className="overflow-x-clip  ">
     <div className= " h-[853px] hidden xl:block  flex  mt-2 xl:h-[663px] xl:mt-10  w-full"  style={{background: "#F2F0F1"} }>
@@ -14,11 +16,7 @@ export default function Home() {
   <div>
  
 {/* Desktop */}
-    <p className="xl:relative xl:z-10 font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6 hidden xl:block xl:text-[64px] xl:ml-[100px] xl:mt-20 xl:leading-[64px]">
-   <span>FIND CLOTHES </span>
-   <span className="xl:block">THAT MATCHES  </span>
-   <span className="xl:block">YOUR STYLE</span>
-    </p> 
+    {/* <textAnimation/> */}
 
     <p className="xl:relative xl:z-10 ml-4 text-[14px] smMax:w-[280px] xl:text-[16px] xl:ml-[110px]"  style={{color:": #00000099"}}>
 
@@ -27,7 +25,7 @@ export default function Home() {
     <span className="xl:block">to bring out your individuality and cater to your sense of style.</span>
     </p>
 
-   <div className="xl:relative xl:z-10 text-center xl:mr-[1060px] smMax:mr-8">
+   <div className="xl:relative xl:z-10 ml-16 text-center xl:mr-[1060px] smMax:mr-8">
    <button className="bg-black text-white text-center py-2 px-6 rounded-3xl smMax:w-[250px]   mx-auto mt-8 w-[350px] xl:w-44 xl:h-12">
   Shop Now
 </button>
@@ -113,8 +111,8 @@ Browse through our diverse range of meticulously crafted garments, designed
 </p>
     </div>
 
-    <div className=" text-center  smMax:ml-8 mt-6 ">
-   <button className="bg-black text-white text-center py-2 px-6 rounded-3xl smMax:w-[250px]     mx-auto mt-8 h-[52px] w-[358px] ">
+    <div className=" text-center  smMax:ml-8 mt-6">
+   <button className="bg-black text-white   text-center py-2 px-6 rounded-3xl smMax:w-[250px]     mx-auto mt-8 h-[52px] w-[358px] ">
   Shop Now
 </button>
    </div>

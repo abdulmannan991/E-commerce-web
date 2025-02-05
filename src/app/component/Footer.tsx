@@ -84,7 +84,7 @@ return(
 
 <div className="xl:flex hidden flex-wrap justify-between items-start mr-12 mt-12 ml-10 xl:-mt-[400px]">
   <ul className="  font-satoshi text-[14px] font-normal text-gray-500 w-[91px] leading-7">
-    <li className="text-[35px] text-black font-bold ">SHOP.CO</li>
+    <li className="text-[35px] text-black font-bold ">ManSun.CO</li>
     <li className="w-[260px] mt-4">We have clothes that suit your style and which you are proud to wear. From women to men.</li>
     <li className="mt-2 ml-2">
     <Image src={"/Social.png"} height={28} width={148} alt="social" className="w-[148px] h-[28px]"></Image>
