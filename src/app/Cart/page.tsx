@@ -2,10 +2,7 @@
 import { useCart } from "../../../context/CartContext";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
-import Footer from "../component/Footer";
-import StayPage from "../component/Stay";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 
 export default function Cart() {
   const { cart, removeFromCart, getCartTotal } = useCart();
