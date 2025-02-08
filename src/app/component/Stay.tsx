@@ -42,7 +42,7 @@ export default function StayPage(){
             
               
             <div className="relative w-[311px]">
-              <span className="text-[16px] mt-2 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <span className="text-[16px] mt-2 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-700">
                 📧 
               </span>
               <input

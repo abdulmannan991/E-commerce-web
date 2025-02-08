@@ -4,7 +4,6 @@ import Link from "next/link"
 import ScrollAnimation from "./Scroll_animation"
 import { useEffect, useState } from "react";
 import { client } from "@/sanity/lib/client";
-// import { product } from "@/sanity/schemaTypes/product";
 import { urlFor } from "@/sanity/lib/image";
 
 export default function TopSelling(){
@@ -100,27 +99,6 @@ useEffect(() => {
         <Image src={"/Cc.png"} width={100} height={100} alt={"menu"} className=" mt-4 ml-28 hidden lg:block"></Image>
         
         </div>
-        {/* Lg : hidden */}
-        {/* <div className="flex font-satoshi font-bold text-xl mt-2 lg:hidden">
-       
-        
-        <p className="   ml-4 ">$212</p>
-          
-          <p className="  ml-2 text-gray-400 line-through">$235</p>
-        <p className="h-[20px] w-[40px] rounded-2xl bg-red  ml-2 text-xs  text-rose-400 text-center">-20%</p>
-          <p className="  ml-[70px] lg:ml-[270px]">$145</p>
-          <p className="  ml-[270px] hidden lg:block">$80</p>
-          <p className="  ml-[370px] hidden lg:block">$210</p>
-        </div>
-        
-        <div className="flex justify-center items-center">
-        <button className="lg:h-[52px] lg:w-[218px] h-[46px] w-[358px] rounded-[62px] bg-white border-[1px] font-satoshi font-medium flex justify-center items-center mt-4">
-          <p>
-            View all
-          </p>
-        </button>
-        </div>
-         */}
         </div>
         
         <div className="flex justify-center items-center mt-6 lg:mt-0">

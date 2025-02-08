@@ -80,24 +80,24 @@ export default function Cart() {
   
       <div className="flex justify-between items-center mt-4">
         <p className="font-satoshi font-normal text-gray-400 text-[16px] lg:text-[20px]">Subtotal</p>
-        <p className="font-satoshi font-bold text-[16px] lg:text-[20px]">${subtotal.toFixed(2)}</p>
+        <p className="font-satoshi font-bold text-[16px] lg:text-[20px]">{subtotal.toFixed(2)}Rs</p>
       </div>
   
       <div className="flex justify-between items-center mt-4">
         <p className="font-satoshi font-normal text-gray-400 text-[16px] lg:text-[20px]">Discount (-20%)</p>
-        <p className="font-satoshi font-bold text-rose-500 text-[16px] lg:text-[20px]">-${discount.toFixed(2)}</p>
+        <p className="font-satoshi font-bold text-rose-500 text-[16px] lg:text-[20px]">{discount.toFixed(2)}-Rs</p>
       </div>
   
       <div className="flex justify-between items-center mt-4">
         <p className="font-satoshi font-normal text-gray-400 text-[16px] lg:text-[20px]">Delivery Fee</p>
-        <p className="font-satoshi font-bold text-[16px] lg:text-[20px]">${deliveryFee.toFixed(2)}</p>
+        <p className="font-satoshi font-bold text-[16px] lg:text-[20px]">{deliveryFee.toFixed(2)}Rs</p>
       </div>
   
       <div className="mt-4 border-t border-gray-300"></div>
   
       <div className="flex justify-between items-center mt-4">
         <p className="font-satoshi font-normal text-[16px] lg:text-[20px]">Total</p>
-        <p className="font-satoshi font-bold text-[20px] lg:text-[24px]">${total.toFixed(2)}</p>
+        <p className="font-satoshi font-bold text-[20px] lg:text-[24px]">{total.toFixed(2)}Rs</p>
       </div>
   
       <div className="flex flex-col items-center space-y-4 mt-4">

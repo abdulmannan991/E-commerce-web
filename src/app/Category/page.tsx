@@ -29,8 +29,8 @@ const [CategoryProducts,setCategoryProducts] = useState<Product[]>([]);
 
 useEffect(() => {
   const fetchCategoryProducts = async () => {
-    const products = await client.fetch(`*[_type == "products"][1..2]  // First 3 products
-      + *[_type == "products"][4..9] + *[_type == "products"][11..11]  // Products 5 to 8`);
+    const products = await client.fetch(`*[_type == "products"][1..2]  
+      + *[_type == "products"][4..9] + *[_type == "products"][11..11]  `);
 
       setCategoryProducts(products);
   };

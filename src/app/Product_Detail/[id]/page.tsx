@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from 'react';
-import { client } from '@/sanity/lib/client'; // Adjust the import based on your setup
+import { client } from '@/sanity/lib/client'; 
 import Image from 'next/image';
-import { urlFor } from '@/sanity/lib/image';// Ensure you have a function to get the image URL
+import { urlFor } from '@/sanity/lib/image';
 import { Product } from '../../../../types/product';
 import StayPage from '@/app/component/Stay';
 import Footer from '@/app/component/Footer';
@@ -10,25 +10,9 @@ import { useCart } from '../../../../context/CartContext';
 
 const ProductDetail = ({params}:{params:{id:string}}) => {
   const [counter, setCounter] = useState(1); 
-  // const [showPopup, setShowPopup] = useState(false);
   const { addToCart } = useCart();
     
     
-    
-
-  
-    // const handleIncrease = ()=>{
-    //   if(Counter<100){
-    //    setincrease(Counter +  1)
-    //   }
-    // }
-  
-  
-    // const handleDecreases = ()=>{
-    //   if(Counter>0){
-    //    setincrease(Counter -  1)
-    //   }
-    // }
 
     const handleIncrease = () => setCounter(counter + 1);
     const handleDecrease = () => setCounter(counter > 1 ? counter - 1 : 1);
@@ -39,14 +23,13 @@ const ProductDetail = ({params}:{params:{id:string}}) => {
       if (product) {
         addToCart(
           {
-            _id: product._id,   // _id is used
+            _id: product._id,   
             name: product.name,
             price: product.price,
             image: product.image,
-            quantity: counter,   // Make sure to include the quantity here
+            quantity: counter,   
           },
           counter 
-            // Pass the quantity as the second argument
         );
         
       }

@@ -6,6 +6,7 @@ import Browse from "./component/Browse";
 import Customer from "./component/Customer";
 import StayPage from "./component/Stay";
 
+
 export default function Home() {
 
   
@@ -16,7 +17,11 @@ export default function Home() {
   <div>
  
 {/* Desktop */}
-    {/* <textAnimation/> */}
+    <p className="xl:relative xl:z-10 font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6 hidden xl:block xl:text-[64px] xl:ml-[100px] xl:mt-20 xl:leading-[64px]">
+   <span>FIND CLOTHES </span>
+   <span className="xl:block">THAT MATCHES  </span>
+   <span className="xl:block">YOUR STYLE</span>
+    </p> 
 
     <p className="xl:relative xl:z-10 ml-4 text-[14px] smMax:w-[280px] xl:text-[16px] xl:ml-[110px]"  style={{color:": #00000099"}}>
 
@@ -126,7 +131,8 @@ Browse through our diverse range of meticulously crafted garments, designed
 
   <p className="ml-56 -mt-4 font-satoshi text-[12px] smMax:ml-[185px] md:ml-[340px]" style={{color:": #00000099"}} >High-Quality Products</p>
 
-  <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} className="sm:hidden smMax:w-[310px] "></Image>
+  <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} loading="eager" className="sm:hidden smMax:w-[310px] "></Image>
+  
   <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} className="hidden sm:block md:w-[590px] md:h-[448px]"></Image>
   
   <Image src={"/dsright.png"} width={76} height={76} alt={"menu"} className="xl:hidden smMax:-mt-80 smMax:ml-56 md:ml-[440px] md:w-36 md:-mt-[440px] md:h-32 -mt-96 ml-72"></Image>
@@ -201,7 +207,7 @@ Browse through our diverse range of meticulously crafted garments, designed
              
             </div>
             
-            <p className="font-satoshi text-[14px] xl:text-[16px] font-normal text-gray-400">
+            <p className="font-satoshi text-[14px] xl:text-[16px] font-normal text-gray-900">
               {`"Im blown away by the quality and style of the clothes
                I received from Shop.co. From casual wear to elegant dresses every piece Ive bought has exceeded my expectations.”`}
               </p>
@@ -227,10 +233,7 @@ Browse through our diverse range of meticulously crafted garments, designed
             <span className="-mt-2 block xl:hidden">
               About Our
             </span>
-{/*             
-            <span className="  hidden xl:block">
-              About 
-            </span> */}
+
             
             <span className="-mt-2 block xl:hidden ">
               Latest Offers
@@ -248,7 +251,7 @@ Browse through our diverse range of meticulously crafted garments, designed
             
               
             <div className="relative w-[311px]">
-              <span className="text-[16px] mt-2 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <span className="text-[16px] mt-2 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-900">
                 📧 
               </span>
               <input
@@ -280,7 +283,7 @@ Browse through our diverse range of meticulously crafted garments, designed
      
  <div className="xl:hidden mx-auto  -mt-[650px]">
      <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
-       <p className="font-satoshi text-gray-500 text-[14px] mt-2 ml-2">
+       <p className="font-satoshi text-gray-900 text-[14px] mt-2 ml-2">
        We have clothes that suits your style and which you are proud to wear. From women to men.
        </p>
  
@@ -293,7 +296,7 @@ Browse through our diverse range of meticulously crafted garments, designed
      <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium">
        Company
      </p>
-     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[91px] text-gray-500 mt-2 leading-7">
+     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[91px] text-gray-900 mt-2 leading-7">
        <li>About</li>
        <li>Features</li>
        <li>Works</li>
@@ -306,7 +309,7 @@ Browse through our diverse range of meticulously crafted garments, designed
      <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium">
        Help
      </p>
-     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[131px] text-gray-500 mt-2 leading-7">
+     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[131px] text-gray-900 mt-2 leading-7">
        <li>Customer Support</li>
        <li>Delivery Detail</li>
        <li>Terms & Conditions</li>
@@ -319,7 +322,7 @@ Browse through our diverse range of meticulously crafted garments, designed
      <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium">
        FAQ
      </p>
-     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[91px] text-gray-500 mt-2 leading-7">
+     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[91px] text-gray-900 mt-2 leading-7">
        <li>Account</li>
        <li>Manage Deliveries</li>
        <li>Orders</li>
@@ -332,7 +335,7 @@ Browse through our diverse range of meticulously crafted garments, designed
      <p className="font-satoshi h-[18px] w-[88px] text-[14px] font-medium mr-24">
        Resources
      </p>
-     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[131px] text-gray-500 mt-2 leading-7">
+     <ul className="list-none font-satoshi text-[14px] font-normal h-[112px] w-[131px] text-gray-900 mt-2 leading-7">
        <li>Free eBook</li>
        <li>Development Tutorial</li>
        <li>How to - Blog</li>
