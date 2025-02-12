@@ -5,7 +5,8 @@ import Footer from "./component/Footer";
 import Browse from "./component/Browse";
 import Customer from "./component/Customer";
 import StayPage from "./component/Stay";
-
+import TextAnimation from "./component/textanimation";
+import TextAnimationMobile from "./component/TextAnimationMobile";
 
 export default function Home() {
 
@@ -17,11 +18,7 @@ export default function Home() {
   <div>
  
 {/* Desktop */}
-    <p className="xl:relative xl:z-10 font-integral font-bold leading-[34px] text-[30px] ml-4  mt-6 hidden xl:block xl:text-[64px] xl:ml-[100px] xl:mt-20 xl:leading-[64px]">
-   <span>FIND CLOTHES </span>
-   <span className="xl:block">THAT MATCHES  </span>
-   <span className="xl:block">YOUR STYLE</span>
-    </p> 
+   <TextAnimation/>
 
     <p className="xl:relative xl:z-10 ml-4 text-[14px] smMax:w-[280px] xl:text-[16px] xl:ml-[110px]"  style={{color:": #00000099"}}>
 
@@ -101,20 +98,9 @@ export default function Home() {
     className=" flex flex-col mt-2 smMax:h-[790px]  h-[853px] xl:mt-10  w-[1028px]"
     style={{ background: "#F2F0F1" }}
   >
-    <p className="space-x-2 font-integral font-bold leading-[34px] text-[36px] ml-4 mt-6">
-      <span>FIND CLOTHES </span>
-      <span className="xl:block">THAT </span>
-      <span className="xl:block">MATCHES YOUR STYLE</span>
-    </p>
+    <TextAnimationMobile/>
 
-    <div className=" mt-4">
-    <p className="xl:relative xl:z-10 ml-4 text-[14px] xl:hidden sm:text-[16px] md:text-[20px] h-[50px] smMax:w-[280px] w-[358px] sm:w-[458px]"  style={{color:": #00000099"}}>
-
-Browse through our diverse range of meticulously crafted garments, designed 
-
-<span className="xl:block">to bring out your individuality and cater to your sense of style.</span>
-</p>
-    </div>
+   
 
     <div className=" text-center  smMax:ml-8 mt-6">
    <button className="bg-black text-white   text-center py-2 px-6 rounded-3xl smMax:w-[250px]     mx-auto mt-8 h-[52px] w-[358px] ">
