@@ -38,8 +38,16 @@ export default function ClientStripePayment() {
   }
 
   if (!clientSecret) {
-    return <p className="text-blue-500">Loading payment...</p>;
+    return (
+      <div className="flex h-screen justify-center items-center">
+        <div className="flex flex-col items-center">
+          <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+          <p className="mt-4 text-black font-semibold text-lg">Processing payment...</p>
+        </div>
+      </div>
+    );
   }
+  
 
   return (
     <div>
