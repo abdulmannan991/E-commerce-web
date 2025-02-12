@@ -3,15 +3,14 @@ import { useCart } from "../../../context/CartContext";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import OrderSummary from "../component/order-summart";
+
 
 export default function Cart() {
-  const { cart, removeFromCart, getCartTotal } = useCart();
+  const { cart, removeFromCart,  } = useCart();
 
-  // Calculate the subtotal dynamically
-  const subtotal = getCartTotal();
-  const discount = subtotal * 0.2; // Assuming a 20% discount
-  const deliveryFee = 15; // Fixed delivery fee
-  const total = subtotal - discount + deliveryFee;
+
+ 
 
   return (
     <div className="flex flex-col lg:flex-row p-4 sm:p-6 space-y-6 lg:space-y-0 lg:space-x-8 justify-between">
@@ -70,9 +69,10 @@ export default function Cart() {
       
     </div>
     
-  
+    <OrderSummary />
+
     {/* 📦 Order Summary Section */}
-    <div className="w-full lg:w-[358px] p-4 sm:p-6 border-[1px] rounded-[20px] mt-6 lg:mt-0">
+    {/* <div className="w-full lg:w-[358px] p-4 sm:p-6 border-[1px] rounded-[20px] mt-6 lg:mt-0">
       <p className="font-satoshi font-bold text-[20px] lg:text-[24px]">Order Summary</p>
   
       <div className="flex justify-between items-center mt-4">
@@ -86,7 +86,12 @@ export default function Cart() {
       </div>
   
       <div className="flex justify-between items-center mt-4">
-        <p className="font-satoshi font-normal text-gray-400 text-[16px] lg:text-[20px]">Delivery Fee</p>
+      {
+  <p className="font-satoshi font-normal text-gray-400 text-[16px] lg:text-[20px]">
+    Delivery Fee: {subtotal === 0 ? "$0" : "$X"} 
+  </p>
+}
+
         <p className="font-satoshi font-bold text-[16px] lg:text-[20px]">{deliveryFee.toFixed(2)}Rs</p>
       </div>
   
@@ -98,7 +103,6 @@ export default function Cart() {
       </div>
   
       <div className="flex flex-col items-center space-y-4 mt-4">
-        {/* Promo Code Input Section */}
         <div className="flex items-center space-x-2 w-full">
           <div className="flex items-center bg-gray-100 rounded-full px-4 py-2 w-full lg:w-[326px]">
             <Image
@@ -119,16 +123,18 @@ export default function Cart() {
           </button>
         </div>
 
+       
   
-        {/* Checkout Button (Stays Inside Card) */}
-        <button className="bg-black text-white rounded-full px-6 py-3 w-full lg:w-[326px] flex items-center justify-center space-x-2">
+       <Link href={"/stripe-payment"} >
+       <button className="bg-black text-white rounded-full px-6 py-3 w-full lg:w-[326px] flex items-center justify-center space-x-2">
           <span>Go to Checkout</span>
           <Image src={"/arrow-down.png"} width={20} height={20} alt="Arrow Icon" className="ml-2" />
         </button>
+       </Link>
         
       </div>
       
-    </div>
+    </div> */}
   
   </div>
   
