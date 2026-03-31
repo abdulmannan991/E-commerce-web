@@ -3,14 +3,14 @@
 import Checkout from "@/app/component/Checkout";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, Suspense } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export const dynamic = 'force-dynamic';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
-export default function StripePayment() {
+function StripePaymentForm() {
   const searchParams = useSearchParams();
   const [cartTotal, setCartTotal] = useState<number | null>(null);
   const [clientSecret, setClientSecret] = useState<string | null>(null);
@@ -58,5 +58,17 @@ export default function StripePayment() {
         <Checkout amount={cartTotal} />
       </Elements>
     </div>
+  );
+}
+
+export default function StripePayment() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen justify-center items-center">
+        <div className="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    }>
+      <StripePaymentForm />
+    </Suspense>
   );
 }
