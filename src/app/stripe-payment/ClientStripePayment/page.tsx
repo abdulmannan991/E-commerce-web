@@ -1,10 +1,12 @@
 "use client";
 
-import Checkout from "@/app/component/Checkout"; // Update import path
+import Checkout from "@/app/component/Checkout";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+
+export const dynamic = 'force-dynamic';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
