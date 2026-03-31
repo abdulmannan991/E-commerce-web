@@ -3,8 +3,8 @@
 import Checkout from "@/app/component/Checkout";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { useSearchParams, Suspense } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState, Suspense } from "react";
 
 export const dynamic = 'force-dynamic';
 
