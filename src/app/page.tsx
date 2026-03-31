@@ -6,7 +6,7 @@ import Footer from "./component/Footer";
 import Browse from "./component/Browse";
 import Customer from "./component/Customer";
 import StayPage from "./component/Stay";
-import TextAnimation from "./component/Textanimation";
+import TextAnimation from "./component/TextAnimation";
 import TextAnimationMobile from "./component/TextAnimationMobile";
 import { motion } from "framer-motion";
 

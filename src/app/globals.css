@@ -30,11 +30,11 @@ body {
   box-sizing: border-box;
 }
 
-
 /* Force light theme site colors for all browsers to match your Opera design */
-* {
-  color: inherit;
-  background-color: transparent;
+/* Avoid overriding background-color globally to preserve Tailwind utility colors */
+html, body {
+  color: #000;
+  background-color: #F2F0F1;
 }
 
 @layer utilities {
