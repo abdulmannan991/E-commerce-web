@@ -9,7 +9,7 @@ export default function TextAnimationMobile() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0, scale: [0.9, 1.05, 1] }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="font-integral font-bold leading-[34px] text-[30px] sm:text-[35px] mt-6"
+        className="font-integral font-bold leading-[34px] text-[30px] sm:text-[35px] mt-6 text-black"
       >
         <motion.span
           initial={{ opacity: 0, y: 10 }}

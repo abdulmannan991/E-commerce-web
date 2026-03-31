@@ -40,12 +40,12 @@ export default function RootLayout({
       </head>
       
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar/>
     
 
         <CartProvider>
-      {children}
-    </CartProvider>
+          <Navbar />
+          {children} {/* Wrap children inside CartProvider */}
+        </CartProvider>
       </body>
     </html>
   );

@@ -2,36 +2,61 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useCart } from "../../../context/CartContext";
 
 
 export default function Navbar(){
 
     const [isOpen,setisOpen] = useState(true);
+    const { cart } = useCart();
+  
+    // Calculate total quantity of items in cart
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  
       const handleClose = () =>{
             setisOpen(false);
         }
         
     return (
 <div>
-    <div className="font-sans text-xs leading-4 bg-black h-[34px] w-full pt-[9px] pb-[9px] mx-auto xl:hidden">
-        <p className="text-white text-center">Sign up and get 20% off to your first order. Sign Up Now</p>
+    <div className="font-sans text-xs leading-4 bg-black w-full px-4 py-2 mx-auto xl:hidden">
+      <div className="relative flex items-center justify-center">
+        <p className="text-white text-center font-semibold">
+          Sign up and get 20% off your first order. Sign Up Now
+        </p>
+        <button
+          onClick={handleClose}
+          aria-label="Close banner"
+          className="absolute right-0 top-1/2 -translate-y-1/2 text-white text-sm font-semibold"
+        >
+          X
+        </button>
+      </div>
     </div>
 {/* Mobile Nav */}
-    <div className="flex items-center xl:hidden">
+    <div className="flex items-center justify-between px-4 py-2 xl:hidden">
         <Image src={"/mobnav.png"} width={24} height={24} alt={"menu"} className="mt-4 ml-2"></Image>
         <p className="font-integral font-bold text-base leading-6 ml-4 mt-4 text-[25px] ">Wear Smart</p>
 
-        <div className="flex justify-end gap-4 mt-4  w-full mr-2 hidden">
-  <i className="fas fa-search text-lg"></i>
+        <div className="flex justify-end gap-4 mt-4 w-full mr-2">
+  <i className="fas fa-search text-lg text-black"></i>
 
-<Link href={"/Cart"} >
-<button name="cart" aria-label="Cart">
-<i className="fas fa-shopping-cart text-lg"></i>
-</button >
-</Link>
+  <div className="relative flex justify-center items-center">
+  <Link href="/Cart">
+    <button name="cart" aria-label="Cart" className="bg-white/90 border border-gray-300 flex justify-center items-center rounded-full h-7 w-7 p-2 hover:bg-white transition-colors">
+      <i className="fas fa-shopping-cart text-gray-700 text-lg"></i>
+    </button>
+  </Link>
 
-<button name="profile" aria-label="Profile">
-<i className="fas fa-user-circle text-lg"></i>
+  {totalItems > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold">
+      {totalItems}
+    </span>
+  )}
+</div>
+
+<button name="profile" aria-label="Profile" className="bg-white/90 border border-gray-300 flex justify-center items-center rounded-full h-7 w-7 p-2 hover:bg-white transition-colors">
+<i className="fas fa-user-circle text-gray-700 text-lg"></i>
 </button>
 </div>
 
@@ -40,11 +65,15 @@ export default function Navbar(){
 
 {isOpen &&
 
-<div className="font-sans flex-col justify-between items-center text-xs leading-4 bg-black h-[38px] w-[1440px] pt-[9px] pb-[9px] mx-auto hidden xl:block ">
-  <p className="text-white text-center text-sm">Sign up and get 20% off your first order. Sign Up Now</p>
-  <p  onClick={handleClose} className= "cursor-pointer text-white text-center text-sm ml-[850px] -mt-5">X</p>
-
-
+<div className="font-sans text-xs leading-4 bg-black w-full max-w-screen-2xl mx-auto px-4 py-2 hidden xl:block">
+  <div className="relative flex items-center justify-center">
+    <p className="text-white text-center text-sm font-semibold">
+      Sign up and get 20% off your first order. Sign Up Now
+    </p>
+    <button onClick={handleClose} aria-label="Close announcement" className="absolute right-0 top-1/2 -translate-y-1/2 text-white text-sm font-semibold">
+      X
+    </button>
+  </div>
 </div>
 }
 <div className="items-center xl:block hidden">
@@ -72,16 +101,25 @@ export default function Navbar(){
 
 </div>
 
-<div className="flex justify-end items-end -mt-6   space-x-6">
+<div className="hidden xl:flex justify-end items-end -mt-6 space-x-5">
+<div className="relative flex justify-center items-center">
+  <Link href="/Cart">
+    <button name="cart" aria-label="Cart" className="bg-white/90 border border-gray-300 flex justify-center items-center rounded-full h-7 w-7 p-2 hover:bg-white transition-colors">
+      <i className="fas fa-shopping-cart text-gray-700 text-lg"></i>
+    </button>
+  </Link>
 
-<Link href={"/Cart"} >
-<button name="cart" aria-label="Cart">
-<i className="fas fa-shopping-cart text-lg"></i>
-</button >
-</Link>
+  {totalItems > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold">
+      {totalItems}
+    </span>
+  )}
+</div>
 
-<button name="profile" aria-label="Profile">
-<i className="fas fa-user-circle text-lg"></i>
+
+
+<button name="profile" aria-label="Profile" className="mr-12 bg-white/90 border border-gray-300 flex justify-center items-center rounded-full h-7 w-7 p-2 hover:bg-white transition-colors">
+<i className="fas fa-user-circle text-gray-700 text-lg"></i>
 </button>
 
  

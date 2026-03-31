@@ -7,7 +7,7 @@ return(
 
 <ScrollAnimation>
 
-<div className="xl:hidden mx-auto   -mt-[650px] ">
+<div className="xl:hidden mx-auto mt-8">
      <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">WearSmart</p>
        <p className="font-satoshi text-gray-700 text-[14px] mt-2 ml-2">
        We have clothes that suits your style and which you are proud to wear. From women to men.
@@ -87,7 +87,7 @@ return(
     <li className="text-[35px] text-black font-bold ">WearSmart</li>
     <li className="w-[260px] mt-4">We have clothes that suit your style and which you are proud to wear. From women to men.</li>
     <li className="mt-2 ml-2">
-    <Image src={"/Social.png"} height={28} width={148} alt="social" className="w-[148px] h-[28px]"></Image>
+    {/* <Image src={"/Social.png"} height={28} width={148} alt="social" className="w-[148px] h-[28px]"></Image> */}
 
     </li>
   </ul>

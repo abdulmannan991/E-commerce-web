@@ -7,7 +7,7 @@ export default function Browse(){
         <div>
           <ScrollAnimation>
               <div className="flex justify-center items-center mt-16 lg:hidden ">
-          <div className="flex flex-col justify-start items-center sm:h-[1250px] h-[975px] max-w-[1023px] w-full rounded-[20px]" style={{ background: "#F2F0F1" }}>
+          <div className="flex flex-col justify-start items-center min-h-0 max-w-full w-full rounded-[20px] p-4" style={{ background: "#F2F0F1" }}>
             <h1 className="font-integral text-[32px] text-center mt-[48px] leading-tight font-bold">
               BROWSE BY <span className="block">Dress STYLE</span>
             </h1>
@@ -23,8 +23,8 @@ export default function Browse(){
         </div>
 
         {/* Desktop */}
-        <div className="flex justify-center items-center mt-16 lg:flex hidden lg:block">
-          <div className="flex flex-col justify-start items-center h-[866px] w-[1239px] rounded-[20px]" style={{ background: "#F2F0F1" }}>
+        <div className="hidden lg:flex justify-center items-center mt-16">
+          <div className="flex flex-col justify-start items-center min-h-[860px] w-full max-w-screen-xl rounded-[20px]" style={{ background: "#F2F0F1" }}>
             <h1 className="font-integral text-[48px] text-center mt-[48px] leading-tight font-bold">
               BROWSE BY <span>Dress STYLE</span>
             </h1>

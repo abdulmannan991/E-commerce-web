@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import NewArrival from "./component/New_arrival";
 import TopSelling from "./component/Top_selling";
@@ -5,22 +6,22 @@ import Footer from "./component/Footer";
 import Browse from "./component/Browse";
 import Customer from "./component/Customer";
 import StayPage from "./component/Stay";
-import TextAnimation from "./component/textanimation";
+import TextAnimation from "./component/Textanimation";
 import TextAnimationMobile from "./component/TextAnimationMobile";
+import { motion } from "framer-motion";
 
 export default function Home() {
 
   
   return (
-   <div className="overflow-x-clip  ">
-    <div className= " h-[853px] hidden xl:block  flex  mt-2 xl:h-[663px] xl:mt-10  w-full"  style={{background: "#F2F0F1"} }>
-
+   <div className="min-h-full">
+    <div className="min-h-[663px] hidden xl:block mt-2 xl:mt-10 w-full" style={{ background: "#F2F0F1" }}>
   <div>
  
 {/* Desktop */}
    <TextAnimation/>
 
-    <p className="xl:relative xl:z-10 ml-4 text-[14px] smMax:w-[280px] xl:text-[16px] xl:ml-[110px]"  style={{color:": #00000099"}}>
+    <p className="xl:relative xl:z-10 ml-4 text-[14px] smMax:w-[280px] xl:text-[16px] xl:ml-[110px] text-black" style={{ color: "rgba(0, 0, 0, 0.75)" }}>
 
     Browse through our diverse range of meticulously crafted garments, designed 
     
@@ -38,15 +39,81 @@ export default function Home() {
 
   <Image src={"/Line.png"} width={2} height={2} alt={"menu"} className=" -mt-8 ml-48 smMax:ml-44"></Image>
   <p className="ml-56 -mt-14 font-satoshi text-[24px] text-black smMax:text-[18px] smMax:ml-[185px]" >2,000+</p>
-  <p className="ml-20 -mt-2 font-satoshi text-[12px] smMax:ml-14" style={{color:": #00000099"}} >International Brands</p>
+  <p className="ml-20 -mt-2 font-satoshi text-[12px] smMax:ml-14 text-black" style={{ color: "rgba(0, 0, 0, 0.65)" }} >International Brands</p>
 
-  <p className="ml-56 -mt-4 font-satoshi text-[12px] smMax:ml-[185px]" style={{color:": #00000099"}} >High-Quality Products</p>
+  <p className="ml-56 -mt-4 font-satoshi text-[12px] smMax:ml-[185px] text-black" style={{ color: "rgba(0, 0, 0, 0.65)" }} >High-Quality Products</p>
 
-  <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} className="xl:hidden smMax:w-[310px] "></Image>
-  <Image src={"/desh.png"} width={1440} height={663} alt={"menu"} className="hidden xl:block -mt-[450px]"></Image>
-  <Image src={"/dsright.png"} width={104} height={104} alt={"menu"} className="hidden xl:block xl:ml-[1255px] -mt-[550px]"></Image>
-  <Image src={"/dsleft.png"} width={56} height={56} alt={"menu"} className=" hidden xl:block xl:ml-[750px] mt-[40px]"></Image>
+  <motion.div
+  initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+  transition={{ duration: 1.8, ease: "easeOut" }}
+  className="relative"
+>
+  <Image
+    src={"/desh.png"}
+    width={1440}
+    height={663}
+    alt={"hero background"}
+    className="hidden xl:block -mt-[450px]"
+  />
+</motion.div>
 
+<motion.div
+  initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
+  animate={{ opacity: 1, scale: 1, rotate: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut", delay: 1 }}
+>
+  {/* Right Star Animation */}
+  <motion.div
+    animate={{
+      y: [0, -5, 5, -3, 0], // Reduced vertical range to prevent going off-screen
+      x: [0, 3, -3, 3, 0], // Subtle left-right movement
+      scale: [1, 1.05, 1], // Gentle scale effect
+      rotate: [0, 10, -10, 10, 0], // Smooth rotation
+    }}
+    transition={{
+      duration: 6, // Slightly slower movement
+      ease: "easeInOut",
+      repeat: Infinity,
+      repeatType: "mirror",
+      delay: 0.5,
+    }}
+  >
+    <Image
+      src={"/dsright.png"}
+      width={104}
+      height={104}
+      alt={"star"}
+      className="hidden xl:block xl:ml-[1255px] -mt-[550px]"
+    />
+  </motion.div>
+
+
+        {/* Left Star Animation */}
+        <motion.div
+          animate={{
+            y: [0, 15, -15, 15, 0],
+            x: [0, -7, 7, -7, 0],
+            scale: [1, 1.08, 1],
+            rotate: [0, -10, 10, -10, 0],
+          }}
+          transition={{
+            duration: 4.5,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "mirror",
+            delay: 0,
+          }}
+        >
+          <Image
+            src={"/dsleft.png"}
+            width={56}
+            height={56}
+            alt={"star"}
+            className="hidden xl:block xl:ml-[750px] mt-[40px]"
+          />
+        </motion.div>
+      </motion.div>
   
 </div>
 
@@ -92,10 +159,10 @@ export default function Home() {
 </div>
 
 
-  </div>   
-  <div className="flex justify-center items-center xl:hidden overflow-x-clip">
+  </div>
+  <div className="flex justify-center items-center xl:hidden">
   <div
-    className=" flex flex-col mt-2 smMax:h-[790px]  h-[853px] xl:mt-10  w-[1028px]"
+    className="flex flex-col mt-2 w-full max-w-screen-xl"
     style={{ background: "#F2F0F1" }}
   >
     <TextAnimationMobile/>
@@ -113,11 +180,11 @@ export default function Home() {
 
   <Image src={"/Line.png"} width={2} height={2} alt={"menu"} className=" -mt-8 ml-48 smMax:ml-44 md:ml-[280px]"></Image>
   <p className="ml-56 -mt-14 font-satoshi text-[24px] text-black smMax:text-[18px] smMax:ml-[185px] md:ml-[340px]" >2,000+</p>
-  <p className="ml-20 -mt-2 font-satoshi text-[12px] smMax:ml-14  md:ml-40" style={{color:": #00000099"}} >International Brands</p>
+  <p className="ml-20 -mt-2 font-satoshi text-[12px] smMax:ml-14  md:ml-40 text-black" style={{ color: "rgba(0, 0, 0, 0.65)" }} >International Brands</p>
 
-  <p className="ml-56 -mt-4 font-satoshi text-[12px] smMax:ml-[185px] md:ml-[340px]" style={{color:": #00000099"}} >High-Quality Products</p>
+  <p className="ml-56 -mt-4 font-satoshi text-[12px] smMax:ml-[185px] md:ml-[340px] text-black" style={{ color: "rgba(0, 0, 0, 0.65)" }} >High-Quality Products</p>
 
-  <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} loading="eager" className="sm:hidden smMax:w-[310px] "></Image>
+  <Image src="/hero1.png" width={390} height={448} alt="menu" loading="eager" className="sm:hidden smMax:w-[310px] "></Image>
   
   <Image src={"/hero1.png"} width={390} height={448} alt={"menu"} className="hidden sm:block md:w-[590px] md:h-[448px]"></Image>
   
@@ -267,7 +334,7 @@ export default function Home() {
 
   </div>
      
- <div className="xl:hidden mx-auto  -mt-[650px]">
+ <div className="xl:hidden mx-auto mt-0">
      <p className="font-integral  font-bold text-[28px] w-[160px] h-[22px] leading-6 mt-8  ml-2 ">SHOP.CO</p>
        <p className="font-satoshi text-gray-900 text-[14px] mt-2 ml-2">
        We have clothes that suits your style and which you are proud to wear. From women to men.

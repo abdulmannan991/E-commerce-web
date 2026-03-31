@@ -8,9 +8,12 @@ import StayPage from '@/app/component/Stay';
 import Footer from '@/app/component/Footer';
 import { useCart } from '../../../../context/CartContext';
 
+
+
 const ProductDetail = ({params}:{params:{id:string}}) => {
   const [counter, setCounter] = useState(1); 
   const { addToCart } = useCart();
+  
     
     
 

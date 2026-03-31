@@ -18,9 +18,9 @@ export default function Customer(){
             
             
             
-                <div className="flex justify-center items-center mt-10 gap-6 -ml-24">
+                <div className="flex flex-wrap justify-center items-center mt-10 gap-6">
             
-                <div className="flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px] -ml-72 lg:blur-sm">
+                <div className="flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px] lg:blur-sm">
                 <div className=" mt-6 space-x-1 ml-6 ">
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
@@ -53,7 +53,7 @@ export default function Customer(){
             
             
             
-                <div className="flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px]">
+                <div className="hidden lg:flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px]">
                 <div className=" mt-6 space-x-1 ml-6 ">
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
@@ -85,7 +85,7 @@ export default function Customer(){
                 </div>
             
             
-                <div className="flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px] hidden lg:block">
+                <div className="hidden lg:flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px]">
                 <div className=" mt-6 space-x-1 ml-6 ">
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>
@@ -118,7 +118,7 @@ export default function Customer(){
             
             
             
-                <div className="flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px] hidden lg:block">
+                <div className="hidden lg:flex h-[186px] w-[358px] lg:h-[240px] lg:w-[400px] text-white border-[1px] rounded-[20px]">
                 <div className=" mt-6 space-x-1 ml-6 ">
                 <span className="text-yellow-500 ">⭐</span>
                 <span className="text-yellow-500 ">⭐</span>

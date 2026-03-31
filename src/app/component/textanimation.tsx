@@ -19,7 +19,7 @@ export default function TextAnimation() {
               initial={{ opacity: 0, x: 100, scale: 0.9 }}
               animate={{ opacity: 1, x: 0, scale: [0.9, 1.05, 1] }}
               transition={{ duration: 1, ease: 'easeOut' }}
-              className="xl:relative xl:z-10 font-integral font-bold leading-[34px] text-[30px] ml-4 mt-6 hidden xl:block xl:text-[64px] xl:ml-[100px] xl:mt-20 xl:leading-[64px]"
+              className="xl:relative xl:z-10 font-integral font-bold leading-[34px] text-[30px] ml-4 mt-6 text-black hidden xl:block xl:text-[64px] xl:ml-[100px] xl:mt-20 xl:leading-[64px]"
             >
               <motion.span
                 initial={{ opacity: 0, x: 50 }}
